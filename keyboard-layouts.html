@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Keyboard Layouts</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Keyboard Layouts</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <p>
+All the layouts in ergoemacs are easy to generate.  To add your own
+personal layout you just need to match the keybindings for your in a
+layout variable from <code>ergoemacs-layout-XXX</code>.  For the US and UK
+layouts, the defining variable adds the layout:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">defvar</span> <span style="font-weight: bold; font-style: italic;">ergoemacs-layout-us</span>
+  '(<span style="font-style: italic;">""</span> <span style="font-style: italic;">"`"</span> <span style="font-style: italic;">"1"</span> <span style="font-style: italic;">"2"</span> <span style="font-style: italic;">"3"</span> <span style="font-style: italic;">"4"</span> <span style="font-style: italic;">"5"</span> <span style="font-style: italic;">"6"</span> <span style="font-style: italic;">"7"</span> <span style="font-style: italic;">"8"</span> <span style="font-style: italic;">"9"</span> <span style="font-style: italic;">"0"</span> <span style="font-style: italic;">"-"</span> <span style="font-style: italic;">"="</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"q"</span> <span style="font-style: italic;">"w"</span> <span style="font-style: italic;">"e"</span> <span style="font-style: italic;">"r"</span> <span style="font-style: italic;">"t"</span> <span style="font-style: italic;">"y"</span> <span style="font-style: italic;">"u"</span> <span style="font-style: italic;">"i"</span> <span style="font-style: italic;">"o"</span> <span style="font-style: italic;">"p"</span> <span style="font-style: italic;">"["</span> <span style="font-style: italic;">"]"</span> <span style="font-style: italic;">"\\"</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"a"</span> <span style="font-style: italic;">"s"</span> <span style="font-style: italic;">"d"</span> <span style="font-style: italic;">"f"</span> <span style="font-style: italic;">"g"</span> <span style="font-style: italic;">"h"</span> <span style="font-style: italic;">"j"</span> <span style="font-style: italic;">"k"</span> <span style="font-style: italic;">"l"</span> <span style="font-style: italic;">";"</span> <span style="font-style: italic;">"'"</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"z"</span> <span style="font-style: italic;">"x"</span> <span style="font-style: italic;">"c"</span> <span style="font-style: italic;">"v"</span> <span style="font-style: italic;">"b"</span> <span style="font-style: italic;">"n"</span> <span style="font-style: italic;">"m"</span> <span style="font-style: italic;">","</span> <span style="font-style: italic;">"."</span> <span style="font-style: italic;">"/"</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>
+    <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Shifted</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">"~"</span> <span style="font-style: italic;">"!"</span> <span style="font-style: italic;">"@"</span> <span style="font-style: italic;">"#"</span> <span style="font-style: italic;">"$"</span> <span style="font-style: italic;">"%"</span> <span style="font-style: italic;">"^"</span> <span style="font-style: italic;">"&amp;"</span> <span style="font-style: italic;">"*"</span> <span style="font-style: italic;">"("</span> <span style="font-style: italic;">")"</span> <span style="font-style: italic;">"_"</span> <span style="font-style: italic;">"+"</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"Q"</span> <span style="font-style: italic;">"W"</span> <span style="font-style: italic;">"E"</span> <span style="font-style: italic;">"R"</span> <span style="font-style: italic;">"T"</span> <span style="font-style: italic;">"Y"</span> <span style="font-style: italic;">"U"</span> <span style="font-style: italic;">"I"</span> <span style="font-style: italic;">"O"</span> <span style="font-style: italic;">"P"</span> <span style="font-style: italic;">"{"</span> <span style="font-style: italic;">"}"</span> <span style="font-style: italic;">"|"</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"A"</span> <span style="font-style: italic;">"S"</span> <span style="font-style: italic;">"D"</span> <span style="font-style: italic;">"F"</span> <span style="font-style: italic;">"G"</span> <span style="font-style: italic;">"H"</span> <span style="font-style: italic;">"J"</span> <span style="font-style: italic;">"K"</span> <span style="font-style: italic;">"L"</span> <span style="font-style: italic;">":"</span> <span style="font-style: italic;">"\""</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"Z"</span> <span style="font-style: italic;">"X"</span> <span style="font-style: italic;">"C"</span> <span style="font-style: italic;">"V"</span> <span style="font-style: italic;">"B"</span> <span style="font-style: italic;">"N"</span> <span style="font-style: italic;">"M"</span> <span style="font-style: italic;">"&lt;"</span> <span style="font-style: italic;">"&gt;"</span> <span style="font-style: italic;">"?"</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>)
+  <span style="font-style: italic;">"US Engilsh QWERTY Keyboard"</span>)
+
+(<span style="font-weight: bold;">defvar</span> <span style="font-weight: bold; font-style: italic;">ergoemacs-layout-gb</span>
+  '(<span style="font-style: italic;">""</span> <span style="font-style: italic;">"`"</span> <span style="font-style: italic;">"1"</span> <span style="font-style: italic;">"2"</span> <span style="font-style: italic;">"3"</span> <span style="font-style: italic;">"4"</span> <span style="font-style: italic;">"5"</span> <span style="font-style: italic;">"6"</span> <span style="font-style: italic;">"7"</span> <span style="font-style: italic;">"8"</span> <span style="font-style: italic;">"9"</span> <span style="font-style: italic;">"0"</span> <span style="font-style: italic;">"-"</span> <span style="font-style: italic;">"="</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"q"</span> <span style="font-style: italic;">"w"</span> <span style="font-style: italic;">"e"</span> <span style="font-style: italic;">"r"</span> <span style="font-style: italic;">"t"</span> <span style="font-style: italic;">"y"</span> <span style="font-style: italic;">"u"</span> <span style="font-style: italic;">"i"</span> <span style="font-style: italic;">"o"</span> <span style="font-style: italic;">"p"</span> <span style="font-style: italic;">"["</span> <span style="font-style: italic;">"]"</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"a"</span> <span style="font-style: italic;">"s"</span> <span style="font-style: italic;">"d"</span> <span style="font-style: italic;">"f"</span> <span style="font-style: italic;">"g"</span> <span style="font-style: italic;">"h"</span> <span style="font-style: italic;">"j"</span> <span style="font-style: italic;">"k"</span> <span style="font-style: italic;">"l"</span> <span style="font-style: italic;">";"</span> <span style="font-style: italic;">"'"</span> <span style="font-style: italic;">"#"</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">"\\"</span>  <span style="font-style: italic;">"z"</span> <span style="font-style: italic;">"x"</span> <span style="font-style: italic;">"c"</span> <span style="font-style: italic;">"v"</span> <span style="font-style: italic;">"b"</span> <span style="font-style: italic;">"n"</span> <span style="font-style: italic;">"m"</span> <span style="font-style: italic;">","</span> <span style="font-style: italic;">"."</span> <span style="font-style: italic;">"/"</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>
+    <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Shifted</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">"&#172;"</span> <span style="font-style: italic;">"!"</span> <span style="font-style: italic;">"@"</span> <span style="font-style: italic;">"#"</span> <span style="font-style: italic;">"$"</span> <span style="font-style: italic;">"%"</span> <span style="font-style: italic;">"^"</span> <span style="font-style: italic;">"&amp;"</span> <span style="font-style: italic;">"*"</span> <span style="font-style: italic;">"("</span> <span style="font-style: italic;">")"</span> <span style="font-style: italic;">"_"</span> <span style="font-style: italic;">"+"</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"Q"</span> <span style="font-style: italic;">"W"</span> <span style="font-style: italic;">"E"</span> <span style="font-style: italic;">"R"</span> <span style="font-style: italic;">"T"</span> <span style="font-style: italic;">"Y"</span> <span style="font-style: italic;">"U"</span> <span style="font-style: italic;">"I"</span> <span style="font-style: italic;">"O"</span> <span style="font-style: italic;">"P"</span> <span style="font-style: italic;">"{"</span> <span style="font-style: italic;">"}"</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>  <span style="font-style: italic;">"A"</span> <span style="font-style: italic;">"S"</span> <span style="font-style: italic;">"D"</span> <span style="font-style: italic;">"F"</span> <span style="font-style: italic;">"G"</span> <span style="font-style: italic;">"H"</span> <span style="font-style: italic;">"J"</span> <span style="font-style: italic;">"K"</span> <span style="font-style: italic;">"L"</span> <span style="font-style: italic;">":"</span> <span style="font-style: italic;">"@"</span> <span style="font-style: italic;">"~"</span> <span style="font-style: italic;">""</span>
+    <span style="font-style: italic;">""</span> <span style="font-style: italic;">"|"</span>  <span style="font-style: italic;">"Z"</span> <span style="font-style: italic;">"X"</span> <span style="font-style: italic;">"C"</span> <span style="font-style: italic;">"V"</span> <span style="font-style: italic;">"B"</span> <span style="font-style: italic;">"N"</span> <span style="font-style: italic;">"M"</span> <span style="font-style: italic;">"&lt;"</span> <span style="font-style: italic;">"&gt;"</span> <span style="font-style: italic;">"?"</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span> <span style="font-style: italic;">""</span>)
+  <span style="font-style: italic;">"UK QWERTY"</span>)
+</pre>
+
+
+<p>
+This lists the keyboard positions from left to right for the unshifted
+and shifted states of he keyboard.  After listing the keyboard
+descriptions it provides a description of the layout which is used for
+the customization variable `ergoemacs-keyboard-layout'.  By simply
+defining your layout before ergoemacs-mode is loaded, you add it to
+the ergoemacs-keyboard-layout variable with its description.
+</p>
+<p>
+If you have generated a keyboard layout that ergoemacs-mode does not yet
+support please <a href="https://github.com/mlf176f2/ergoemacs-mode/issues/new">drop me a line</a>.
+</p>
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+
