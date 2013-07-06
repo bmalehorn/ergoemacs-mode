@@ -4,14 +4,17 @@
     <meta charset="utf-8"/>
     <title>Standard Shortcuts</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
     <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
     <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
     <script src="./style/js/prettify.js" type="text/javascript"></script>
     <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
     <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
@@ -94,50 +97,39 @@
     <div id="page" class="container">
 
 <article>
-  <header class="article-header">
-    <div class="well">
-      <div class="row">
-	<div class="span1">
-	  <div class="qr-code">
-  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3A%2F%2Fmlf176f2.github.com%2Fergoemacs-mode%2Fstandard-shortcuts.html"
-       alt="qr-code" />
-</div>
-
-	</div>
-	<h1 class="offset1" style="font-size: 250%;">Standard Shortcuts</h1>
-      </div>
-    </div>
-  </header>
   <div class="article-content">
-    <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+    <p>
+This shows the standard shortcuts implemented in ergoemacs:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <thead>
 <tr><th scope="col" class="left">Standard Name</th><th scope="col" class="left">Ergoemacs-key</th><th scope="col" class="left">Emacs Key</th><th scope="col" class="left">Emacs Command Name</th></tr>
 </thead>
 <tbody>
-<tr><td class="left">Copy</td><td class="left">Ctrl+c</td><td class="left">Alt+w</td><td class="left"><code>kill-ring-save</code></td></tr>
-<tr><td class="left">Cut</td><td class="left">Ctrl+x</td><td class="left">Ctl+w</td><td class="left"><code>kill-region</code></td></tr>
-<tr><td class="left">Paste</td><td class="left">Ctrl+v</td><td class="left">Ctrl+y</td><td class="left"><code>yank</code></td></tr>
-<tr><td class="left">Undo</td><td class="left">Ctrl+z</td><td class="left">Ctrl+_ or Ctrl+/</td><td class="left"><code>undo</code></td></tr>
-<tr><td class="left">Redo</td><td class="left">Ctrl+⇧ Shift+z or Ctrl+y</td><td class="left">NA</td><td class="left"><code>redo</code></td></tr>
-<tr><td class="left">Open New File</td><td class="left">Ctrl+n</td><td class="left">NA</td><td class="left">Not builtin</td></tr>
-<tr><td class="left">Open</td><td class="left">Ctrl+o</td><td class="left">Ctrl+x Ctrl+f</td><td class="left"><code>find-file</code></td></tr>
-<tr><td class="left">Print</td><td class="left">Ctrl+p</td><td class="left">NA</td><td class="left"></td></tr>
-<tr><td class="left">Select All</td><td class="left">Ctrl+a</td><td class="left"></td><td class="left"><code>mark-whole-buffer</code></td></tr>
-<tr><td class="left">Find</td><td class="left">Ctrl+f</td><td class="left">Ctrl+s</td><td class="left"><code>search-forward</code></td></tr>
+<tr><td class="left">Copy</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd></td><td class="left"><kbd class="dark">Alt</kbd>+<kbd class="dark">w</kbd></td><td class="left"><code>kill-ring-save</code></td></tr>
+<tr><td class="left">Cut</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd></td><td class="left"><kbd class="dark">Ctl</kbd>+<kbd class="dark">w</kbd></td><td class="left"><code>kill-region</code></td></tr>
+<tr><td class="left">Paste</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">y</kbd></td><td class="left"><code>yank</code></td></tr>
+<tr><td class="left">Undo</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">z</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">_</kbd> or <kbd class="dark">Ctrl</kbd>+<kbd class="dark">/</kbd></td><td class="left"><code>undo</code></td></tr>
+<tr><td class="left">Redo</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">z</kbd> or <kbd class="dark">Ctrl</kbd>+<kbd class="dark">y</kbd></td><td class="left">NA</td><td class="left"><code>redo</code></td></tr>
+<tr><td class="left">Open New File</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">n</kbd></td><td class="left">NA</td><td class="left">Not builtin</td></tr>
+<tr><td class="left">Open</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">o</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd></td><td class="left"><code>find-file</code></td></tr>
+<tr><td class="left">Print</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">p</kbd></td><td class="left">NA</td><td class="left"></td></tr>
+<tr><td class="left">Select All</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">a</kbd></td><td class="left"></td><td class="left"><code>mark-whole-buffer</code></td></tr>
+<tr><td class="left">Find</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">s</kbd></td><td class="left"><code>search-forward</code></td></tr>
 </tbody>
 </table>
 
 
 
 <p>
-Standard shortcuts for cursor navigation are also supported. Example:
+Standard shortcuts for cursor navigation are also supported. For example:
 </p>
 <ul>
-<li>Ctrl+← ⇒ move cursor to to previous word.
+<li><kbd class="dark">Ctrl</kbd>+<kbd class="dark">←</kbd> ⇒ move cursor to to previous word.
 </li>
-<li>Home ⇒ move cursor to beginning of line.
+<li><kbd class="dark">Home</kbd> ⇒ move cursor to beginning of line.
 </li>
 <li>⇧ Shift+↓ select text downward.
 </li>

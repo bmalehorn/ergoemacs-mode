@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ergoemacs-mode</title>
-  <link href="http://mlf176f2.github.com/ergoemacs-modeindex.xml" rel="self" />
-  <link href="http://mlf176f2.github.com/ergoemacs-mode"/>
+  <link href="http://mlf176f2.github.com/ergoemacs-mode/index.xml" rel="self" />
+  <link href="http://mlf176f2.github.com/ergoemacs-mode/"/>
   <updated>2013-02-08T19:33:26Z</updated>
-  <id>http://mlf176f2.github.com/ergoemacs-modeindex.xml</id>
+  <id>http://mlf176f2.github.com/ergoemacs-mode/index.xml</id>
   
 </feed>

@@ -4,14 +4,17 @@
     <meta charset="utf-8"/>
     <title>FAQ</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
     <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
     <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
     <script src="./style/js/prettify.js" type="text/javascript"></script>
     <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
     <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
@@ -96,19 +99,51 @@
 <article>
   <div class="article-content">
     <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1">How do you select text when using ergoemacs-mode and ergoemacs-arrow keys?</h3>
+<h3 id="sec-1"><kbd class="dark">H</kbd>ow do you select text when using ergoemacs-mode and ergoemacs-arrow keys</h3>
 <div class="outline-text-3" id="text-1">
 
-
-<p>
-You can hold the left Alt, then right hand press space to mark, then
-right hand using any of QWERTY i j k l to move by char, line, or u o
-to move by word. U and O to move by paragraph/block.
+<p>You can hold the left <kbd class="dark">Alt</kbd>,
+then right hand press space to mark, then right hand using any of
+QWERTY 
+<kbd class="dark">i</kbd> 
+<kbd class="dark">j</kbd> 
+<kbd class="dark">k</kbd> 
+<kbd class="dark">l</kbd> to move by char, line, or 
+<kbd class="dark">u</kbd> 
+<kbd class="dark">o</kbd>  to move
+by word. ⇧ Shift+U and ⇧ Shift+O to move by paragraph/block.
 </p>
 <p>
-to select all, you can press Ctrl+a.
+Of course, you can also use the <a href="standard-shortcuts.html">standard shortcuts</a>.  For example, 
+to select all, you can press <kbd class="dark">Ctrl</kbd>+<kbd class="dark">a</kbd>.  To move up, you can press ⇧
+Shift+↓ to select text downward.
 </p>
 </div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><kbd class="dark">W</kbd>hats the difference between ergoemacs and ergoemacs-mode?</h3>
+<div class="outline-text-3" id="text-2">
+
+<p><a href="http://ergoemacs.org/">Ergoemacs</a> is a set of customizations that make emacs easier to use.
+It also includes <a href="index.html">ergoemacs-mode</a>.  The minor mode, <a href="index.html">ergoemacs-mode</a>,
+implements the keybindings (and some other features) via a minor-mode
+that can be toggled to get back to standard emacs.
+</p></div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><kbd class="dark">W</kbd>hy don't you use the standard emacs key notation?</h3>
+<div class="outline-text-3" id="text-3">
+
+<p>The <a href="http://www.emacswiki.org/emacs/EmacsKeyNotation">emacs key notation</a> is common across emacs, but not common for new
+users.  One of the goals of ergoemacs-mode is to allow new emacs users
+to not have to learn anything about the keys to start using emacs.
+Therefore, all keys are defined in <kbd class="dark">Ctrl</kbd>+<kbd class="dark">s</kbd> notation instead of <code>C-s</code>
+notation.
+</p></div>
 </div>
 
   </div>
