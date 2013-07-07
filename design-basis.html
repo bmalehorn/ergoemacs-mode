@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Standard Shortcuts</title>
+    <title>Design Basis</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
     <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -93,7 +93,7 @@
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
-  <li>Standard Shortcuts</li>
+  <li>Design Basis</li>
   </ul>
 
       </div>
@@ -103,43 +103,68 @@
 <article>
   <div class="article-content">
     <p>
-This shows the standard shortcuts implemented in ergoemacs:
+Here's the outline of how this design is arrived.
 </p>
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" />
-</colgroup>
-<thead>
-<tr><th scope="col" class="left">Standard Name</th><th scope="col" class="left">Ergoemacs-key</th><th scope="col" class="left">Emacs Key</th><th scope="col" class="left">Emacs Command Name</th></tr>
-</thead>
-<tbody>
-<tr><td class="left">Copy</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd></td><td class="left"><kbd class="dark">Alt</kbd>+<kbd class="dark">w</kbd></td><td class="left"><code>kill-ring-save</code></td></tr>
-<tr><td class="left">Cut</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd></td><td class="left"><kbd class="dark">Ctl</kbd>+<kbd class="dark">w</kbd></td><td class="left"><code>kill-region</code></td></tr>
-<tr><td class="left">Paste</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">y</kbd></td><td class="left"><code>yank</code></td></tr>
-<tr><td class="left">Undo</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">z</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">_</kbd> or <kbd class="dark">Ctrl</kbd>+<kbd class="dark">/</kbd></td><td class="left"><code>undo</code></td></tr>
-<tr><td class="left">Redo</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">z</kbd> or <kbd class="dark">Ctrl</kbd>+<kbd class="dark">y</kbd></td><td class="left">NA</td><td class="left"><code>redo</code></td></tr>
-<tr><td class="left">Open New File</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">n</kbd></td><td class="left">NA</td><td class="left">Not builtin</td></tr>
-<tr><td class="left">Open</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">o</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd></td><td class="left"><code>find-file</code></td></tr>
-<tr><td class="left">Print</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">p</kbd></td><td class="left">NA</td><td class="left"></td></tr>
-<tr><td class="left">Select All</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">a</kbd></td><td class="left"></td><td class="left"><code>mark-whole-buffer</code></td></tr>
-<tr><td class="left">Find</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">s</kbd></td><td class="left"><code>search-forward</code></td></tr>
-</tbody>
-</table>
-
+<p>
+Statistics of emacs commands are compiled from emacs users, and are
+listed by frequency of use. The top about 30 ones, are given a
+keyboard shortcut.
+</p>
+<p>
+To assign the key position, the following rules are used. The rules
+are listed roughly in order of priority:
+</p><ol>
+<li>Home row keys are the best.
+</li>
+<li>2nd and 3rd fingers (pointing finger and index finger) are better
+   than 4th (ring finger) and 5th finger (pinky).
+</li>
+<li>The row above home row is considered better than the row below home
+   row for 2nd and 3rd fingers. (for 5th finger the row below is
+   considered better.)
+</li>
+<li>Right hand's keys are considered better than left hand's keys. (because most people are right handed)
+</li>
+<li><kbd class="dark">Alt</kbd> is considered better
+   than <kbd class="dark">Ctrl</kbd>. (<kbd
+   class="dark">Alt</kbd> 
+   is a natural thumb curl, <kbd class="dark">Ctrl</kbd> is
+   stretched pinky. Thumb is most powerful finger, pinkie the weakest)
+</li>
+<li>In general, cursor moving commands are placed all for the right
+   hand, while text changing commands are all placed for the left
+   hand. (grouping advantage)
+</li>
+<li>Similar commands should be grouped together to avoid
+   scattering. For example, cursor moving by single char is together
+   (<kbd class="dark">I</kbd> <kbd class="dark">J</kbd> <kbd class="dark">K</kbd> <kbd class="dark">L</kbd>). Undo, Cut, Copy, Paste are together (<kbd class="dark">Z</kbd> <kbd class="dark">X</kbd> <kbd class="dark">C</kbd> <kbd class="dark">V</kbd>). Delete
+   char/word left/right are together (<kbd class="dark">E</kbd> <kbd class="dark">R</kbd> <kbd class="dark">D</kbd> <kbd class="dark">F</kbd>).
+</li>
+<li>Commands with logical reversal or extension are done with <kbd class="dark">⇧ Shift</kbd>
+   key, after other priorities are considered. Examples: Undo/Redo,
+   move cursor to previous/next pane, find replace by string/regex,
+   isearch forward/backward, move cursor by beginning/ending of
+   line. Delete line to the right/left.
+</li>
+</ol>
 
 
 <p>
-Standard shortcuts for cursor navigation are also supported. For example:
+The design is based on finger positions, not on first letter of
+command names. The shortcut set is the same for QWERTY and Dvorak. The
+ease of remembering what commands are on what keys are based on
+grouping and positioning. For example, cursor movings are all right
+hand, text changing are all left hand, moving or deleting to the
+left/right have keys that are place left and right together, and
+similar for up/down (by screen or to beginning/end of file). Undo,
+Cut, Copy, Paste are the familiar row <kbd class="dark">Z</kbd> <kbd class="dark">X</kbd> <kbd class="dark">C</kbd> <kbd class="dark">V</kbd>.
 </p>
-<ul>
-<li><kbd class="dark">Ctrl</kbd>+<kbd class="dark">←</kbd> ⇒ move cursor to to previous word.
-</li>
-<li><kbd class="dark">Home</kbd> ⇒ move cursor to beginning of line.
-</li>
-<li>⇧ Shift+↓ select text downward.
-</li>
-</ul>
-
-
+<p>
+In this design, only the <kbd class="dark">Alt</kbd>+<kbd class="dark">‹key›</kbd> space is used. Some <kbd class="dark"><kbd class="dark">Alt</kbd>+<kbd class="dark">@</kbd>@html:&lt;kbd class="dark"&gt;@@⇧ Shift</kbd>
+is used too. <kbd class="dark">Ctrl</kbd>+<kbd class="dark">‹key›</kbd> space is not used except 7 standard
+keybindings (Open, Close, Save, Save As, Print, Select All). The
+operation and consistency of emacs is not affected.
+</p>
   </div>
 </article>
       </div>
