@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Banish Key Chords</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a>
+</li>
+<li>
+</li>
+<li><a href="design-basis.html">Design Basis</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Banish Key Chords</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><kbd class="dark">B</kbd>ackground</h3>
+<div class="outline-text-3" id="text-1">
+
+<p>Key chords (like <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>) is the bane of keyboarding.
+There are 3 types of key shortcuts to invoke commands in software:
+</p>
+<ol>
+<li>Single key.  Examples include: <kbd class="dark">F1</kbd>, <kbd class="dark">PgUp</kbd>. 
+</li>
+<li>Key chord: <kbd class="dark">⇧ Shift+a </kbd>,
+   <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>, <kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">z</kbd>, <kbd class="dark">Alt</kbd>+<kbd class="dark">F</kbd>4.
+</li>
+<li>Key sequence of single keys or chords. For example on Microsoft
+   Windows, 【F10 e c】 for copy, or 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>pace c】 to close window.
+</li>
+</ol>
+
+
+<p>
+of these, in terms of efficiency and hand health (Repetitive Strain
+Injury), the single key is the best. Key sequence of single keys is
+second best. Key chord is the worst.
+</p>
+
+<p>
+Key chord is the most hard on hand health, but is also conceptually
+the most convoluted.
+</p>
+<p>
+I [Xah Lee] remember in around 1991, when i first learned about key
+chord on the Macintosh Classic. I thought, it's strange. You have to
+hold ⌘ Cmd first, then press the key c, then, release c, then, release
+⌘ Cmd. It must be in that specific order.
+</p>
+<p>
+A more natural way is either key sequence, or real chords. That is,
+pressing several keys together but you don't have to worry about which
+to hold or release first. Stenograph machines are like that.
+</p>
+
+</div>
+
+<div id="outline-container-1-1" class="outline-4">
+<h4 id="sec-1-1"><kbd class="dark">W</kbd>hence Did Key Chord Came From?</h4>
+<div class="outline-text-4" id="text-1-1">
+
+<p>I suppose, when computer keyboard came, sans levels and gears, but
+habit stuck, and this evolved into “modifier” keys, with Bucky bits.
+</p>
+<p>
+Now, thinking about this, i think Microsoft must be a genius, when
+they invented the key system on Windows, where Alt is used to invoke
+menu, and all command can be called by a sequence of key strokes. This
+is probably the best system given the PC keyboard. This system, lets
+you invoke any command, yet has menu counter-part, so it's easy to see
+a list of them and also grouped by category. (emacs's system of course
+is much more extensive than that.)
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-4">
+<h4 id="sec-1-2"><kbd class="dark">W</kbd>hat Should a Keyboard Nerd Do with Key Chords?</h4>
+<div class="outline-text-4" id="text-1-2">
+
+<p>BAN the them out of the universe.
+</p>
+<p>
+But, there isn't enough keys on keyboard. You only have 12 function
+keys, plus some others such as ↖ Home, ↓. But there are 10 times more
+commands in software.  What to do?
+</p>
+<p>
+For majority of commands, you should use a key sequence of single
+keys, instead. For example, 【F10 e c】. But Function keys are further
+away. So, you could start with a easy key such as 【▤ Menu e c】, and
+reassign most of your keys to key sequence. (you can make Caps Lock as
+your start key, whichever key on YOUR keyboard is easy to press.)
+</p>
+<p>
+There are 26 letters in alphabet, plus 10 digits, so you have 36 key
+choices for the key. (ignore punctuation keys for the moment) If each
+of your command has 2 keys in a key sequence (not counting the
+starting key), then you have 36 × 36 = 1296 possible keys for
+commands. Quite enough!
+</p>
+<p>
+Still, some commands are not suitable for key sequence. For example,
+moving cursor by word. You want to be able to hold down a key and have
+the cursor keep moving. You can't do that with key sequences, because
+you need to release the key and press again to invoke the command
+again. Answer: use single key. Retort: But F keys are far away and
+arrow keys are already used. Answer: key chord then.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-4">
+<h4 id="sec-1-3"><kbd class="dark">P</kbd>rinciples on Efficient Use of Key Chords</h4>
+<div class="outline-text-4" id="text-1-3">
+
+<p>Key chord should be used only for commands that need to be repeated
+within a second (hold the key and let the command repeat).  This
+includes moving cursor, paging, switching tab/window.
+</p>
+<p>
+Key chord should use no more than one modifier. This saves your
+hand. So, key chord such as emacs interactive replace 【<kbd class="dark">Alt</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">%</kbd>】
+or Mac's redo 【⌘ Cmd+⇧ Shift+z】 should not be allowed.
+</p>
+<p>
+more detail at Keyboard Shortcut Design: Repeatable vs Non-Repeatable
+Commands and Keys
+</p>
+<p>
+If you survey commands in a editor, such as emacs, vast majority of
+commands are the non-repeating type. The repeating type are probably
+less than 5% of commands. Using 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">‹</kbd>letter/digit›】 key give you
+about 36 spots. Adding Alt, you have 72 spots. And that's more than
+enough for repeating commands. In practice, i estimate a programer
+uses less than 30 repeating commands per day on average.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-4">
+<h4 id="sec-1-4"><kbd class="dark">W</kbd>hat About Sticky Keys?</h4>
+<div class="outline-text-4" id="text-1-4">
+
+<p>I do not advocate the Sticky Keys feature for the handicapped. It's
+not the same. Sticky Keys actually make things a worse, because it's a
+hack over key chords. When you press a sequence of keys, it has to
+guess whether you mean a sequence or chord (since emacs supports
+both). The end result is that it's confusing to use, imprecise, and
+slows you down.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><kbd class="dark">K</kbd>eyboard Shortcut Design</h3>
+<div class="outline-text-3" id="text-2">
+
+<p>This section discuss one criterion on the design of keyboard shortcut
+system: Repeatable vs Non-Repeatable Commands and Keys. This
+applicable in designing keybinding for emacs, vi, 3D modeling app, or
+any app that has hundreds commands that needs to map to keys.
+</p>
+</div>
+
+<div id="outline-container-2-1" class="outline-4">
+<h4 id="sec-2-1"><kbd class="dark">R</kbd>epeatable and Non-Repeatable Commands</h4>
+<div class="outline-text-4" id="text-2-1">
+
+<p>In my keyboarding research, there's a important discovery. Commands
+can be classified into 2 types:
+</p><ol>
+<li>Repeatable commands. Commands that make sense to be repeated within
+   a second. i.e. moving cursor by char, word, page. Page up/down. Delete
+   by char, word. Expand selection, prev/next tab. You can hold down a
+   key or a key-chord to repeat the command many times. 
+
+</li>
+<li>Non-repeat commands. This is vast majority. i.e. starting
+   find/replace, open file, close file, list buffers, call a shell
+   command or start shell, describe-function, keyword expansion or
+   completion, list-matching-lines, sort-lines, kill-buffer,
+   switch-to-buffer, &hellip;
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-4">
+<h4 id="sec-2-2"><kbd class="dark">R</kbd>epeatable and Non-Repeatable Keys</h4>
+<div class="outline-text-4" id="text-2-2">
+
+<p>The Repeatable Commands must have keys that can be held down. Here's
+example of repeatable hotkeys: F8, t, ⇟ Page ▽, ↓, 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">t</kbd>】,
+【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">A</kbd>lt+8】, ….
+</p>
+<p>
+Non-repeatable hotkeys are basically keys that involves a sequence:
+【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> 2】, 【F8 F9】
+</p>
+<p>
+So, when designing a shortcut system, one of the principle is for
+repeatable commands be on repeatable keys, else it's a waste. (because
+you only have a few precious easy key spots, yet you have one hundred
+commands in common use.)
+</p>
+<p>
+In GNU Emacs's default keybinding, there are many such wastes. For
+example, all 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">‹</kbd>number›】 and 【<kbd class="dark">Alt</kbd>+<kbd class="dark">‹</kbd>number›】 are bound to
+digit-argument. The digit-argument is a non-repeat command, yet it
+sits on 20 EASY repeatable keys. (but most damaging is that
+digit-argument isn't a frequently needed command, with respect to all
+commands and the relatively few easy-key-spots.)
+</p>
+<p>
+Another bad example is forward-page 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> ]】. forward-page is a
+repeatable command, but it doesn't have a repeating key. Imagine, if
+every time you need to ⇟ Page ▽ that you have to press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>】
+first. You couldn't just hold it down.
+</p>
+<p>
+But remember, this “Repeatable and Non-Repeatable key” is only a
+supporting criterion in keybinding design. It is not the most
+important criterion. The single most important criterion in designing
+a keyboard shortcut system is that most frequently used commands be
+mapped to the most easy-to-press keys. 
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><kbd class="dark">E</kbd>rgoemacs Key Chord Reduction</h3>
+<div class="outline-text-3" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-4">
+<h4 id="sec-3-1">[Control+x] and [Control-c] reduction</h4>
+<div class="outline-text-4" id="text-3-1">
+
+<p>For emacs, the most common prefixes are [Control-x] or [Control-c].
+</p>
+<p>
+For QWERTY, an additional mapping of these keys have been made:
+</p><ul>
+<li>A modified Control-x map has been assigned to Menu f:
+<ul>
+<li>This map allows you to type the keys without a key chord
+    requirement.  For example to switch buffers instead of
+    [Control+x] [b] you could type [Menu] [f] [b].  (Note that the [f]
+    key changes based on layout; For example using the colemak layout
+    you would type [Menu] [t] [b] to switch buffers).
+
+</li>
+<li>This modified keymap changes the control-chorded keys to
+    alt-chorded keys since they are easier to reach, there is another
+    keymap that removes the control-chorded keys.  Therefore to get
+    the buffer list, instead of having to type [Control-x]
+    [Control-b] you can type [Menu] [f] [Alt-b].
+
+</li>
+<li>The [Alt-] keychords in this modified keymap are changed to
+    [Control-] keys.  For example, <code>repeat-complex-command</code> is mapped
+    from [Control-x] [<kbd class="dark">Alt</kbd>+<kbd class="dark">:</kbd>] to [Menu] [f] [Control-:].  As far as I
+    can tell this is the only [Control-x] [Alt] combination. 
+
+</li>
+</ul>
+
+</li>
+<li>A modified unchorded Control-x map has assigned to QWERTY [Menu]
+  [r].  This map has changed the Control-x map as follows:
+
+<ul>
+<li>Chorded control keys are subset.  Therefore only keys that have
+    the combination [Control-x] [Control-] are used.
+
+</li>
+<li>Chorded key combinations are changed drop the chord.  For example
+    the buffer list [Control-x] [Conrtol-b] is changed to [Menu] [r]
+    [b].
+
+</li>
+<li>Chorded key combinations that are single key are translated to
+    [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> for example [Control+k] [a] is changed to [Menu] [r] [k]
+    [<kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>]
+
+</li>
+<li>Chorded key combinations that work with [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> are translated to
+    [Control+].  For example [Control+k] [<kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>] is changed to [Menu]
+    [r] [k] [Control+a].  I don't think there are currently any keys
+    bound to these types of key combinations.  They are quite
+    difficult to press and remember.
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+<p>
+Similarly The Control-c keymap is rebound to [Menu] [j] for the
+modified [Control-c] keymap and [Menu] [u] for the unchorded
+[Control-c] keymap.  This is also true of the [Control-h] keymap.
+This is bound to [Menu] [h] for the normal Control-h keymap.  It is
+also bound to [Menu] [y] for the unchorded Control-h keymap.
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-4">
+<h4 id="sec-3-2"><kbd class="dark">M</kbd>ovement without key-chords</h4>
+<div class="outline-text-4" id="text-3-2">
+
+
+</div>
+
+<div id="outline-container-3-2-1" class="outline-5">
+<h5 id="sec-3-2-1">Method #1 &ndash; &lt;menu&gt; Movement mode</h5>
+<div class="outline-text-5" id="text-3-2-1">
+
+<p>One can enable movement without key-chords as follows:
+</p><ul>
+<li>On QWERTY, press [Menu] [k] and then the movement key.  This key is
+  repeatable.  Therefore [Menu] [k] [k] [k] would move the cursor down
+  two lines.  If this is followed by [i] this would have the cursor
+  move up a line.  To exit the repeatable movement/delete keys press
+  [Menu].  This is similar to VIM's edit mode, with a toggle of the
+  [Menu] key.
+<ul>
+<li>Shifted keys still are allowed.  For example, page up can be
+    accomplished in QWERTY by [Shift+i].
+</li>
+<li>Any command that enters the minibuffer also exits the repeatable
+    movement/deletion.
+</li>
+<li>Any undefined key in the keymap (like 1) would exit the mode and
+    insert the character
+</li>
+</ul>
+
+</li>
+<li>To reduce the shifted key-chords, on QWERTY you can also press
+  [Menu] [i].  Therefore [Menu] [i] [i] is equivalent to one page
+  up. Followed by a [k] will be the page-down equivalent
+<ul>
+<li>Again, [Menu] stops the movement mode and anything that enters
+    the minibuffer removes the movement mode.
+</li>
+<li>Any undefined key in the keymap (like 1) would exit the mode and
+    insert the character
+</li>
+<li>Shift and the key is the unshifted command.  Therefore [Menu] [i]
+    [i] [Shift+k] would be Page Up followed by down one character.
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+
