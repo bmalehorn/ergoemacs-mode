@@ -104,8 +104,38 @@
   <div class="article-content">
     <p>
 To report a bug please be sure your issue is <code>ergoemacs-mode</code>
-related.  An easy way to do that is to boostrap your environment to
-see if you can reproduce the error.
+related.  An easy way to do that is to get a clean  environment to
+see if you can reproduce the error.  If you can load ergoemacs, then
+this can be accomplished by <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd> <code>ergoemacs-clean</code>. 
+</p>
+<p>
+Otherwise, this can be accomplished by
+</p>
+
+
+
+<pre class="src src-sh">emacs -Q
+</pre>
+
+
+<p>
+Then in the scratch-buffer adding
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-debug t)
+(setq ergoemacs-keyboard-layout <span style="font-style: italic;">"us"</span>) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Layout you use.</span>
+(setq ergoemacs-theme nil) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">For standard theme.</span>
+(ergoemacs-mode 1)
+</pre>
+
+
+<p>
+Then type <kbd class="dark">Alt</kbd>+<kbd class="dark">x</kbd> <code>eval-buffer</code>.
+</p>
+<p>
+See if you can reproduce the bug from this empty environment.
 </p>
   </div>
 </article>
