@@ -1,113 +1,113 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//</loc>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//</loc>
     <lastmod>2013-02-08T19:33:26Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//index.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//index.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//changelog.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//changelog.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//design-basis.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//design-basis.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//standard-shortcuts.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//standard-shortcuts.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//key-setup.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//key-setup.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//own-keys.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//own-keys.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//key-themes.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//key-themes.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//keyboard-layouts.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//keyboard-layouts.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//bug-report.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//bug-report.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//testimonials.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//testimonials.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//roadmap.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//roadmap.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//banish-key-chords.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//banish-key-chords.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//faq.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//faq.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//gradual-adoption.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//gradual-adoption.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
-    <loc>http://ergoemacs.github.com/ergoemacs-mode//system-wide.html</loc>
-    <lastmod>2013-07-08T15:48:00Z</lastmod>
+    <loc>http://mlf176f2.github.com/ergoemacs-mode//system-wide.html</loc>
+    <lastmod>2013-07-13T12:02:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
