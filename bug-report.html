@@ -124,7 +124,9 @@ Then in the scratch-buffer adding
 
 
 
-<pre class="src src-emacs-lisp">(setq ergoemacs-debug t)
+<pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="font-style: italic;">"/path/to/ergoemacs/"</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
+(setq ergoemacs-debug t)
 (setq ergoemacs-keyboard-layout <span style="font-style: italic;">"us"</span>) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Layout you use.</span>
 (setq ergoemacs-theme nil) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">For standard theme.</span>
 (ergoemacs-mode 1)
