@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Customizing your keys</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a>
+</li>
+<li>
+</li>
+<li><a href="design-basis.html">Design Basis</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+</li>
+<li><a href="./customize-keys.html">Customizing your keys</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Customizing your keys</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <p>
+You may want to customize your ergoemacs-mode bindings to fit your
+particular workflow.  This can be accomplished in many ways,
+</p>
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><kbd class="dark">E</kbd>rgoemacs defined keys</h3>
+<div class="outline-text-3" id="text-1">
+
+<p>These keys are defined in the <code>ergoemacs-keymap</code>.  When the layout
+changes by changing options, these keys are lost.  However, you may
+create your own theme to allow these keys to be saved.
+</p>
+</div>
+
+<div id="outline-container-1-1" class="outline-4">
+<h4 id="sec-1-1"><kbd class="dark">A</kbd>dding a ergonomic key</h4>
+<div class="outline-text-4" id="text-1-1">
+
+<p>Ergonomic keys can be added by:
+</p>
+
+
+<pre class="src src-emacs-lisp">(ergoemacs-key <span style="font-style: italic;">"M-a"</span> 'execute-extended-command <span style="font-style: italic;">"Execute"</span>)
+</pre>
+
+
+<p>
+This adds the Alt-a command to all keyboards based on the QWERTY
+layout.  This only applies to the currently selected keyboard theme.
+</p>
+<p>
+Note the last parameter is optional and allows Ergoemacs to document
+that this is an "Execute" command when generating keyboard layout diagrams.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-4">
+<h4 id="sec-1-2"><kbd class="dark">A</kbd>dding a fixed key</h4>
+<div class="outline-text-4" id="text-1-2">
+
+<p>Fixed keys can be added by:
+</p>
+
+
+<pre class="src src-emacs-lisp">(ergoemacs-fixed-key <span style="font-style: italic;">"C-o"</span> 'ido-find-file <span style="font-style: italic;">"Open File"</span>)
+</pre>
+
+
+<p>
+This adds the fixed key to the currently selected emacs theme
+</p>
+<p>
+Note the last parameter is optional and allows Ergoemacs to document
+that this is an "Open" command when generating keyboard layout diagrams.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-4">
+<h4 id="sec-1-3"><kbd class="dark">A</kbd>dding an ergonomic key map with fixed mappings</h4>
+<div class="outline-text-4" id="text-1-3">
+
+<p>When you want to add an ergonomic keymap with fixed mappings such as
+the ergoprog theme you can add them as follows:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(ergoemacs-key <span style="font-style: italic;">"M-m s"</span> 'save-buffer <span style="font-style: italic;">""</span> t)
+</pre>
+
+
+<p>
+This converts the QWERTY M-m keybinding and the fixed keybinding s to
+save buffer
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><kbd class="dark">U</kbd>sing standard emacs functions</h3>
+<div class="outline-text-3" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-4">
+<h4 id="sec-2-1"><kbd class="dark">D</kbd>efining keys globally</h4>
+<div class="outline-text-4" id="text-2-1">
+
+<p>Ergoemacs respects emacs globally defined keys.  To define a global
+key, you can use:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="font-style: italic;">"M-a"</span>) 'backward-char)
+(global-set-key (kbd <span style="font-style: italic;">"C-a"</span>) 'backward-char)
+</pre>
+
+
+<p>
+This uses <a href="http://www.emacswiki.org/emacs/EmacsKeyNotation">emacs key notation</a>.  In short <code>M-a</code> represents <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>, <code>C-a</code>
+represents <kbd class="dark">Ctl</kbd>+<kbd class="dark">a</kbd>.  For these two examples the key is bound to emacs function
+<code>backward-char</code>.
+</p>
+<p>
+When you define a global key that conflicts with ergoemacs-mode
+keybindings (after loading ergoemacs-mode) the binding will no longer
+active in ergoemacs-mode. Therefore, the binding should be active in
+most places in emacs.
+</p>
+<p>
+There is still a possibility that another major or minor mode will
+bind the key. If that occurs, you can locally override the bindings.
+Assuming this occurs in <code>silly-mode</code>, you can usually override the
+settings by setting the keys locally in the major-mode:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(add-hook 'silly-mode-hook
+          (<span style="font-weight: bold;">lambda</span>()
+            (local-set-key (kbd <span style="font-style: italic;">"C-a"</span>) 'backward-char)))
+</pre>
+
+
+<p>
+Also note that the order that you define the global-keys matter when
+using <code>ergoemacs-mode</code>.  For example, if you decide to change the
+global binding before <code>ergoemacs-mode</code> loads, the key definition is
+typically ignored when <code>ergoemacs-mode</code> is enabled.  For example:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="font-style: italic;">"M-a"</span>) 'backward-char)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
+(ergoemacs-mode 1)
+
+</pre>
+
+
+<p>
+The keyboard definition for <code>backward-char</code> is ignored when
+<code>ergoemacs-mode</code> is enabled. However, if you use:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
+(global-set-key (kbd <span style="font-style: italic;">"M-a"</span>) 'backward-char)
+(ergoemacs-mode 1)
+
+</pre>
+
+
+<p>
+then ergoemacs-mode will respect the <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd> backward character
+assignment.  
+</p>
+<p>
+This behavior allows ergoemacs keybindings to override the keys in an
+emacs configuration like prelude, emacs-live, etc.  If you do not this
+behavior can be turned off by:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="font-style: italic;">"M-a"</span>) 'backward-char)
+(setq ergoemacs-ignore-prev-global nil) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Will not ignore any globally</span>
+                                        <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">defined keybinding</span>
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
+(ergoemacs-mode 1)
+
+</pre>
+
+
+<p>
+In this example <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd> will be bound to <code>backward-char</code> for
+ergoemacs-mode as well as globally.
+</p>
+<p>
+If you are loading <code>ergoemacs-mode</code> before loading one of these emacs
+settings and you want to <i>ignore</i> the keybindings of the settings,
+you can also ignore them by using the following code
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="font-style: italic;">"M-a"</span>) 'backward-char)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
+(ergoemacs-mode 1)
+
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Load starter kit here</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Ignore starter-kit keys in ergoemacs-mode</span>
+(ergoemacs-ignore-prev-global) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Globally defined keys defined</span>
+                               <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">before this point are ignored</span>
+</pre>
+
+
+<p>
+One of the disadvantages of using globally defined keys it they will
+be bound globally even if <code>ergoemacs-mode</code> is not active.
+Additionally, they are not Layout independent.  For example, defining
+<kbd class="dark">Alt</kbd>+<kbd class="dark">j</kbd> on QWERTY will not change to <kbd class="dark">Alt</kbd>+<kbd class="dark">n</kbd> for colemak.  
+</p>
+</div>
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+
