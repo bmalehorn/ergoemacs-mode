@@ -45,7 +45,9 @@
 </li>
 <li><a href="./key-themes.html">Key Themes</a>
 </li>
-<li><a href="./keyboard-layouts.html">Keyboard Layouts</a>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a> 
+</li>
+<li><a href="./minor-modes.html">Changes to Modes</a>
 </li>
 <li>
 </li>
@@ -105,10 +107,20 @@
 <article>
   <div class="article-content">
     <p>
-To report a bug please be sure your issue is <code>ergoemacs-mode</code>
-related.  An easy way to do that is to get a clean  environment to
-see if you can reproduce the error.  If you can load ergoemacs, then
-this can be accomplished by <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd> <code>ergoemacs-clean</code>. 
+Before reporting a bug, please check if it is already known about.
+Indeed, it may already have been fixed in a later release of
+<code>ergoemacs-mode</code>, or in the development version.  Here is the issues
+list: <a href="https://github.com/ergoemacs/ergoemacs-mode/issues">https://github.com/ergoemacs/ergoemacs-mode/issues</a>
+</p>
+<p>
+If you are able to, try the latest <code>ergoemacs-mode</code> to see if the
+problem has already been fixed.
+</p>
+<p>
+To report a bug please be sure your issue is <code>ergoemacs-mode</code> related.
+An easy way to do that is to get a clean environment to see if you can
+reproduce the error.  If you can load ergoemacs, then this can be
+accomplished by <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd> <code>ergoemacs-clean</code>.
 </p>
 <p>
 Otherwise, this can be accomplished by
@@ -121,12 +133,13 @@ Otherwise, this can be accomplished by
 
 
 <p>
-Then in the scratch-buffer adding
+Then in the <code>*scratch*</code> buffer adding
 </p>
 
 
 
-<pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="font-style: italic;">"/path/to/ergoemacs/"</span>)
+<pre class="src src-emacs-lisp">(setq debug-on-error t) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Activate debugging</span>
+(add-to-list 'load-path <span style="font-style: italic;">"/path/to/ergoemacs/"</span>)
 (<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
 (setq ergoemacs-debug t)
 (setq ergoemacs-keyboard-layout <span style="font-style: italic;">"us"</span>) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Layout you use.</span>
@@ -139,7 +152,19 @@ Then in the scratch-buffer adding
 Then type <kbd class="dark">Alt</kbd>+<kbd class="dark">x</kbd> <code>eval-buffer</code>.
 </p>
 <p>
-See if you can reproduce the bug from this empty environment.
+See if you can reproduce the bug from this empty environment.  If you
+can reproduce the bug this way, that rules out bugs in your personal
+customizations.  Then your bug report should begin by stating that you
+started Emacs with <code>emacs -Q</code>, followed by the exact sequence of steps
+for reproducing the bug.  If possible, inform us of the exact contents
+of any file that is needed to reproduce the bug.
+</p>
+<p>
+When you hit an error, a <code>*Backtrace*</code> buffer will appear on the
+screen.  Save this buffer to a file and attach it to your bug report.
+</p>
+<p>
+Please report documentation bug too.
 </p>
   </div>
 </article>

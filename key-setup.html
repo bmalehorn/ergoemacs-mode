@@ -45,7 +45,9 @@
 </li>
 <li><a href="./key-themes.html">Key Themes</a>
 </li>
-<li><a href="./keyboard-layouts.html">Keyboard Layouts</a>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a> 
+</li>
+<li><a href="./minor-modes.html">Changes to Modes</a>
 </li>
 <li>
 </li>
@@ -143,23 +145,23 @@ function change_layout() {
   document.getElementByTagName('ergo_kbd').src = "ergoemacs-extras/" + dir + "/ergoemacs-layout-" + img + ".html";
 }
     </script><form><strong>Layout:</strong><select onchange="change_layout()" id="select_layout">
-<option value="asset">US Asset layout. URL `http://millikeys.sourceforge.net/asset/'(asset)</option>
-<option value="bepo">French BÉPO layout. URL `http://bepo.fr/'(bepo)</option>
-<option value="colemak">US Colemak layout URL `http://colemak.com/'(colemak)</option>
-<option value="da">Danish layout(da)</option>
-<option value="de">German QWERTZ layout(de)</option>
-<option value="dv">US Dvorak layout. URL `http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard'(dv)</option>
-<option value="es">Spanish layout. URL `http://en.wikipedia.org/wiki/Keyboard_layout'(es)</option>
-<option value="fa">FA Persian standard layout(fa)</option>
-<option value="fr">French AZERTY layout. URL `http://en.wikipedia.org/wiki/Keyboard_layout'(fr)</option>
-<option value="gb">UK layout. URL `http://en.wikipedia.org/wiki/Keyboard_layout'(gb)</option>
-<option value="gb-dv">UK Dvorak layout(gb-dv)</option>
-<option value="it">Italian layout. URL `http://en.wikipedia.org/wiki/Keyboard_layout'(it)</option>
-<option value="programmer-dv">US Programmer Dvorak layout(programmer-dv)</option>
-<option value="pt-nativo">PT Nativo layout URL `http://xahlee.info/kbd/pt-nativo_keyboard_layout.html'(pt-nativo)</option>
-<option value="sw">Swedish layout(sw)</option>
-<option value="us" selected>US English QWERTY layout(us)</option>
-<option value="workman">US Workman layout. URL `http://www.workmanlayout.com/blog/'(workman)</option>
+<option value="asset">US Asset layout.  URL `http://millikeys.sourceforge.net/asset/'.(asset)</option>
+<option value="bepo">French BÉPO layout.  URL `http://bepo.fr/'.(bepo)</option>
+<option value="colemak">US Colemak layout URL `http://colemak.com/'.(colemak)</option>
+<option value="da">Danish layout.(da)</option>
+<option value="de">German QWERTZ layout.(de)</option>
+<option value="dv">US Dvorak layout.  URL `http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard'.(dv)</option>
+<option value="es">Spanish layout.  URL `http://en.wikipedia.org/wiki/Keyboard_layout'.(es)</option>
+<option value="fa">FA Persian standard layout.(fa)</option>
+<option value="fr">French AZERTY layout.  URL `http://en.wikipedia.org/wiki/Keyboard_layout'.(fr)</option>
+<option value="gb">UK layout.  URL `http://en.wikipedia.org/wiki/Keyboard_layout'.(gb)</option>
+<option value="gb-dv">UK Dvorak layout.(gb-dv)</option>
+<option value="it">Italian layout.  URL `http://en.wikipedia.org/wiki/Keyboard_layout'.(it)</option>
+<option value="programmer-dv">US Programmer Dvorak layout.(programmer-dv)</option>
+<option value="pt-nativo">PT Nativo layout URL `http://xahlee.info/kbd/pt-nativo_keyboard_layout.html'.(pt-nativo)</option>
+<option value="sw">Swedish layout.(sw)</option>
+<option value="us" selected>US English QWERTY layout.(us)</option>
+<option value="workman">US Workman layout.  URL `http://www.workmanlayout.com/blog/'.(workman)</option>
 </select><br/><strong>Theme:</strong><select onchange="change_layout()" id="select_theme"><option value="kbd-layouts">Keyboard Layout</option><option value="ergo-layouts" selected>Standard</option><option value="5.3.7">5.3.7 - Old Ergoemacs layout.  Uses M-; and M-: for isearch.  Uses M-n for cancel.</option>
 <option value="5.7.5">5.7.5 - Old ergoemacs layout.  Uses M-0 for close pane. Does not have beginning/end of buffer.</option>
 <option value="cabbage">cabbage - Cabbage theme.</option>
