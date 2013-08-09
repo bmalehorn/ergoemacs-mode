@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>System Wide Keys</title>
+    <title>Making Keys Easier to type</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
     <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -101,7 +101,7 @@
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
-  <li>System Wide Keys</li>
+  <li>Making Keys Easier to type</li>
   </ul>
 
       </div>
@@ -110,48 +110,23 @@
 
 <article>
   <div class="article-content">
-    <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1"><kbd class="dark">B</kbd>ash</h3>
-<div class="outline-text-3" id="text-1">
-
-<p>You can <a href="http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html">make bash understand</a> ergoemacs-mode keys by creating an
-appropriate <code>.inputrc</code> and placing it in your home-directory.
+    <p>
+Emacs commands are very long and descriptive.  It may be a good idea
+to shorten commands you use frequently.  This can be done by defining
+<a href="http://ergoemacs.org/emacs/emacs_alias.html">aliases</a>. 
 </p>
 <p>
-When ergoemacs-mode is enabled, this can be done easily by typing
+Ergoemacs-mode already adds support for a few commonly used commands
+like allowing <code>eb</code> be the same as <code>eval-buffer</code>.  These are defined
+in the variable <code>ergoemacs-aliaeses</code> which may be customized.  This
+can also be turned off by setting <code>ergoemacs-use-aliases</code> to nil:
 </p>
-<p>
-<kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd> <code>ergoemacs-bash</code>
-</p>
-<p>
-This should also be available in the ergoemacs menu.
-</p>
-</div>
 
-</div>
 
-<div id="outline-container-2" class="outline-3">
-<h3 id="sec-2"><kbd class="dark">W</kbd>indows</h3>
-<div class="outline-text-3" id="text-2">
 
-<p>In windows some of the ergoemacs keys are implemented system wide by
-assuming apps follow the CUA-style keys like CTRL-f for find, CTRL-h
-for replace.  This also optionally implements:
-</p><ul>
-<li>CapsLock as Menu in emacs
-</li>
-</ul>
+<pre class="src src-emacs-lisp">(setq ergoemacs-use-aliases nil)
+</pre>
 
-</div>
-
-</div>
-
-<div id="outline-container-3" class="outline-3">
-<h3 id="sec-3"><kbd class="dark">M</kbd>ac OS X</h3>
-<div class="outline-text-3" id="text-3">
-
-</div>
-</div>
 
   </div>
 </article>
