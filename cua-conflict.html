@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Preserving Emacs Commands while maintaining familiar shortcuts</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li><a href="./cua-conflict.html">Preserving Emacs Commands while maintaining familiar shortcuts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a> 
+</li>
+<li><a href="./minor-modes.html">Changes to Modes</a>
+</li>
+<li>
+</li>
+<li><a href="design-basis.html">Design Basis</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+</li>
+<li><a href="./customize-keys.html">Customizing your keys</a>
+</li>
+<li>
+</li>
+<li><a href="./aliases.html">Making Commands Easier to Type</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Preserving Emacs Commands while maintaining familiar shortcuts</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><kbd class="dark">C</kbd>onflict for Emacs command keys and familiar shortcuts</h3>
+<div class="outline-text-3" id="text-1">
+
+<p>There is a conflict between standard shortcuts and emacs shortcuts.
+In most applications <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> is copy and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> is cut.  In emacs
+<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> generally refer to global commands, while <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> refers to
+language specific commands. 
+</p>
+<p>
+Ergoemacs provides a few options to work with the <kbd class="dark">Ctl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctl</kbd>+<kbd class="dark">x</kbd> keys.
+</p>
+
+</div>
+
+<div id="outline-container-1-1" class="outline-4">
+<h4 id="sec-1-1"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to both copy and cut and emacs keys</h4>
+<div class="outline-text-4" id="text-1-1">
+
+<p>Like <code>cua-mode</code>, <code>ergoemacs-mode</code> allows <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to be
+bound to both copy/cut, and the emacs key sequences.
+</p>
+<p>
+The default method will copy text when selected with <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and cut
+text when selected with <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>.  This is fine, but if you wish to
+perform an emacs command on selected region, this could be problematic
+as discussed in Xah's <a href="http://ergoemacs.org/misc/emacs_keybinding_and_cua-mode_keys.html">blog</a>.  (For example python shift indent is bound
+to 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> &lt;】) 
+</p>
+<p>
+When you wish to do issue emacs commands on a region you can:
+</p><ul>
+<li>Add a shift to the first <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>.
+<ul>
+<li>For example press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">c</kbd> &lt;】 for python's shift indent
+    command
+</li>
+<li>This will not work in a terminal (most terminals cannot tell the
+    difference between 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">c</kbd>】 and 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>】)
+</li>
+</ul>
+
+</li>
+<li>Press the next key within 0.2 seconds.
+<ul>
+<li>This can be tuned by setting <code>ergoemacs-ctl-c-or-ctl-x-delay</code>
+</li>
+<li>If you tune this to a higher setting, it takes longer to copy and
+    cut and other problems may be introduced.
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+<p>
+If you wanted the time required to press the next key be 1 second,
+you could use the following in your emacs startup file:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-ctl-c-or-ctl-x-delay 1)
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-4">
+<h4 id="sec-1-2"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to emacs commands only</h4>
+<div class="outline-text-4" id="text-1-2">
+
+<p>Another option is to ditch copy and paste with <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>, even
+though they are standard keys.  Instead you can use <kbd class="dark">Alt</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Alt</kbd>+<kbd class="dark">x</kbd> to
+do copy and paste.
+</p>
+<p>
+This can be done in ergoemacs by the following variable:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-handle-ctl-c-or-ctl-x 'only-C-c-and-C-x)
+</pre>
+
+
+<p>
+The disadvantage to this approach is that you use different keys in
+different applications. 
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-4">
+<h4 id="sec-1-3"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to only copy and cut</h4>
+<div class="outline-text-4" id="text-1-3">
+
+<p>If you wanted <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to only be copy and cut, you add
+the ability to copy/cut the current line when nothing is selected.
+This can be done by:
+</p>
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-handle-ctl-c-or-ctl-x 'only-copy-cut)
+</pre>
+
+
+<p>
+The possible disadvantage to this is you would have to use another key
+to access the defined emacs commands.  Currently ergoemacs-mode allows
+you to use QWERTY 【▤ Menu f】 or 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">x</kbd>】 to access emacs
+<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> commands and QWERTY 【▤ Menu j】 or 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">c</kbd>】 to
+access <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> commands.
+</p>
+<p>
+The 【▤ Menu】 keybindings are slightly different than plan <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> or
+<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>:
+</p><ul>
+<li>For <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>, the Alt and Ctrl keys are swapped.  Hence for the
+  equivalent of 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd>】, you would press 【▤ Menu f <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd>】
+</li>
+<li>For <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>, control keys are mapped to plain keys. Plain keys
+  are mapped to Alt keys. Alt keys are mapped to Ctl keys.  Hence:
+<ul>
+<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>】 would be 【▤ Menu j c】
+</li>
+<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> c】 would be 【▤ Menu j <kbd class="dark">Alt</kbd>+<kbd class="dark">c</kbd>】
+</li>
+<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> <kbd class="dark">Alt</kbd>+<kbd class="dark">c</kbd>】 would be 【▤ Menu j <kbd class="dark">Ctl</kbd>+<kbd class="dark">c</kbd>】
+</li>
+<li>This is called unchorded mapping
+</li>
+</ul>
+
+</li>
+<li>You can swap between Normal, Alt&lt;-&gt;Ctl and unchorded keyboard
+  translations in ergoemacs by pressing 【▤ Menu】
+</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+
