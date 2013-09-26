@@ -113,8 +113,41 @@
 <article>
   <div class="article-content">
     <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1"><kbd class="dark">H</kbd>ow do you select text when using ergoemacs-mode and ergoemacs-arrow keys</h3>
+<h3 id="sec-1"><kbd class="dark">H</kbd>ow do you get a 【▤ Menu】 key in Mac OS X</h3>
 <div class="outline-text-3" id="text-1">
+
+<p>Some of ergoemacs keys make use of the 【▤ Menu】 key.
+One way to set this up in a mac is to replace the Caps Lock key with
+F13 or above, and tell emacs that F13 is actually the menu key.  This
+is done by:
+</p>
+<ol>
+<li>Downloading and installing <a href="https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html">PCKeyboardHack</a>
+</li>
+<li>Going to the system prefences and PCKeyboardHack
+</li>
+<li>Change the caps lock mapping to F13
+</li>
+<li>Adding the translation to emacs startup script (like ~/.emacs or
+   ~/.emacs.d/init.el) as follows:
+</li>
+</ol>
+
+
+
+
+
+<pre class="src src-emacs-lisp">(define-key key-translation-map (kbd <span style="font-style: italic;">"&lt;F13&gt;"</span>) (kbd <span style="font-style: italic;">"&lt;menu&gt;"</span>))
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><kbd class="dark">H</kbd>ow do you select text when using ergoemacs-mode and ergoemacs-arrow keys</h3>
+<div class="outline-text-3" id="text-2">
 
 <p>You can hold the left <kbd class="dark">Alt</kbd>,
 then right hand press space to mark, then right hand using any of
@@ -136,9 +169,9 @@ Shift+↓ to select text downward.
 
 </div>
 
-<div id="outline-container-2" class="outline-3">
-<h3 id="sec-2"><kbd class="dark">W</kbd>hats the difference between ergoemacs and ergoemacs-mode?</h3>
-<div class="outline-text-3" id="text-2">
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><kbd class="dark">W</kbd>hats the difference between ergoemacs and ergoemacs-mode?</h3>
+<div class="outline-text-3" id="text-3">
 
 <p><a href="http://ergoemacs.org/">Ergoemacs</a> is a set of customizations that make emacs easier to use.
 It also includes <a href="index.html">ergoemacs-mode</a>.  The minor mode, <a href="index.html">ergoemacs-mode</a>,
@@ -148,9 +181,9 @@ that can be toggled to get back to standard emacs.
 
 </div>
 
-<div id="outline-container-3" class="outline-3">
-<h3 id="sec-3"><kbd class="dark">W</kbd>hy don't you use the standard emacs key notation?</h3>
-<div class="outline-text-3" id="text-3">
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4"><kbd class="dark">W</kbd>hy don't you use the standard emacs key notation?</h3>
+<div class="outline-text-3" id="text-4">
 
 <p>The <a href="http://www.emacswiki.org/emacs/EmacsKeyNotation">emacs key notation</a> is common across emacs, but not common for new
 users.  One of the goals of ergoemacs-mode is to allow new emacs users
