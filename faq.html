@@ -112,7 +112,31 @@
 
 <article>
   <div class="article-content">
-    <div id="outline-container-1" class="outline-3">
+    <pre class="src src-emacs-lisp">(global-set-key (kbd <span style="font-style: italic;">"&lt;C-j&gt;"</span>) 'ergoemacs-cut-line-or-region)
+</pre>
+
+
+<ul>
+<li>If you want you can keep <i>all</i> standard shortcuts in the normal
+  QWERTY positions by:
+</li>
+</ul>
+
+
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-theme nil)
+(setq ergoemacs-change-fixed-layout-to-variable-layout t)
+(setq ergoemacs-keyboard-layout <span style="font-style: italic;">"dv"</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
+(ergoemacs-mode 1)
+</pre>
+
+
+
+
+<div id="outline-container-1" class="outline-3">
 <h3 id="sec-1"><kbd class="dark">H</kbd>ow do you get a 【▤ Menu】 key in Mac OS X</h3>
 <div class="outline-text-3" id="text-1">
 
