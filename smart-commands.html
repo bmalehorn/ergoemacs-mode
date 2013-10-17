@@ -250,6 +250,76 @@ replaces the <code>move-beginning-line</code> with whatever the mode defines
 <h3 id="sec-2"><kbd class="dark">E</kbd>nd of line</h3>
 <div class="outline-text-3" id="text-2">
 
+<p>The end of line command for ergoemacs is just as smart as beginning
+of line.  For example if your cursor is <code>|</code>, and you are at:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">progn</span>
+|  (ergoemacs-mode 1)) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">This turns ergoemacs-mode on.</span>
+</pre>
+
+
+<p>
+ may wish to go to the end of the code block:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">progn</span>
+  (ergoemacs-mode 1))| <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">This turns ergoemacs-mode on.</span>
+</pre>
+
+
+<p>
+or the end of the line:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">progn</span>
+  (ergoemacs-mode 1)) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">This turns ergoemacs-mode on.|</span>
+</pre>
+
+
+<p>
+The after that you can:
+</p><ul>
+<li>Goto the next text-block (default)
+</li>
+<li>Issue a PageDown command
+</li>
+<li>Goto the end of the buffer.
+</li>
+</ul>
+
+
+<p>
+Currently this command is bound to 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+h】
+</p>
+<p>
+You can ignore the comment feature by the following initialization code:
+</p>
+<p>
+You can change the command that is issued at the end of the
+line by using one of the following commands.
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-beginning-or-end-of-line-and-what 'block) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">End</span>
+                                        <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">of text block</span>
+(setq ergoemacs-beginning-or-end-of-line-and-what 'page) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Page Down</span>
+(setq ergoemacs-beginning-or-end-of-line-and-what 'buffer) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">End</span>
+                                        <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">of Buffer</span>
+</pre>
+
+
+<p>
+Note that this command also respects mode specific changes to
+end-of-line commands (like in <code>org-mode</code>).
+</p>
 </div>
 
 </div>
