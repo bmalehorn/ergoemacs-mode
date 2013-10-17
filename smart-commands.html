@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>ergoemacs-mode</title>
+    <title>Smart Commands</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
     <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -105,7 +105,7 @@
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
-  <li>Archives</li>
+  <li>Smart Commands</li>
   </ul>
 
       </div>
@@ -114,12 +114,154 @@
 
 <article>
   <div class="article-content">
-    <nav class="archives">
-      <ul class="all">
-  
+    <div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><kbd class="dark">B</kbd>eginning of Line</h3>
+<div class="outline-text-3" id="text-1">
+
+<p>Often you wish to move to the beginning of some part of a line.  For
+example:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">progn</span>
+  (ergoemacs-mode 1)) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">This turns ergoemacs-mode on.|</span>
+</pre>
+
+
+<p>
+With the cursor <code>|</code> at the end of the line, you might want to go to
+the beginning of the comment:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">progn</span>
+  (ergoemacs-mode 1)) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">|This turns ergoemacs-mode on.</span>
+</pre>
+
+
+<p>
+That way you can delete and change the commment (With QWERTY 【<kbd class="dark">Alt</kbd>+<kbd class="dark">g</kbd>】).
+</p>
+<p>
+You may even want to go to  the end of the code line:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">progn</span>
+    (ergoemacs-mode 1))| <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">This turns ergoemacs-mode on.</span>
+</pre>
+
+
+<p>
+That way you can delete the comment entirely (With QWERTY 【<kbd class="dark">Alt</kbd>+<kbd class="dark">g</kbd>】).
+</p>
+<p>
+Often you may want to go back to the first non-whitespace character
+of the line like:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">progn</span>
+   |(ergoemacs-mode 1)) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">This turns ergoemacs-mode on.</span>
+</pre>
+
+
+<p>
+Or even the fist actual first character of the line:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">progn</span>
+|  (ergoemacs-mode 1)) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">This turns ergoemacs-mode on.</span>
+</pre>
+
+
+<p>
+Once there it is not too useful to go to the beginning of the line
+again.  So, you may wish to:
+</p><ul>
+<li>Goto the last text block (separated by 2 new lines; default)
+</li>
+<li>Issue a page-up command
+</li>
+<li>Goto the beginning of the buffer
+</li>
 </ul>
 
-    </nav>
+
+<p>
+All of these can be accomplished by the smart ergoemacs-mode
+<code>beginning-of-line</code> function, which is  bound to 【<kbd class="dark">Alt</kbd>+<kbd class="dark">h</kbd>】.
+</p>
+<p>
+If you don't want ergoemacs-mode to ignore comments when going to the
+beginning or end of the line you can change this behavior by:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-end-of-comment-line nil)
+</pre>
+
+
+<p>
+You may want to only go to the beginning of line, instead of the
+beginning of the indentation (the first non whitespace character).
+This can be changed by
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-back-to-indentation nil)
+</pre>
+
+
+<p>
+You can change the command that is issued at the beginning of the
+line by using one of the following commands.
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-beginning-or-end-of-line-and-what 'block) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Beginning</span>
+                                        <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">of text block</span>
+(setq ergoemacs-beginning-or-end-of-line-and-what 'page) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Page Up</span>
+(setq ergoemacs-beginning-or-end-of-line-and-what 'buffer) <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">Beginning</span>
+                                        <span style="font-weight: bold; font-style: italic;">; </span><span style="font-weight: bold; font-style: italic;">of Buffer</span>
+</pre>
+
+
+<p>
+You may worry about smart mode-specific commands such as org-mode's
+beginning or end of line.  Don't worry ergoemacs-mode will respect
+it, and do the right thing.  This is because ergoemacs-mode actually
+replaces the <code>move-beginning-line</code> with whatever the mode defines
+<code>move-beginning-line</code> to be.
+</p></div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><kbd class="dark">E</kbd>nd of line</h3>
+<div class="outline-text-3" id="text-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><kbd class="dark">B</kbd>eginning or end of buffer</h3>
+<div class="outline-text-3" id="text-3">
+
+
+</div>
+</div>
+
   </div>
 </article>
       </div>
