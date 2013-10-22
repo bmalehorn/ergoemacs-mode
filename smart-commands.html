@@ -118,7 +118,9 @@
 <h3 id="sec-1"><kbd class="dark">B</kbd>eginning of Line</h3>
 <div class="outline-text-3" id="text-1">
 
-<p>Often you wish to move to the beginning of some part of a line.  For
+
+<p>
+Often you wish to move to the beginning of some part of a line.  For
 example:
 </p>
 
@@ -242,7 +244,41 @@ beginning or end of line.  Don't worry ergoemacs-mode will respect
 it, and do the right thing.  This is because ergoemacs-mode actually
 replaces the <code>move-beginning-line</code> with whatever the mode defines
 <code>move-beginning-line</code> to be.
-</p></div>
+</p>
+<p>
+For example set:
+</p>
+
+
+<pre class="src src-emacs-lisp">(setq org-special-ctrl-a/e t)
+</pre>
+
+
+<p>
+And then go to an <code>org-mode</code> headline:
+</p>
+
+
+
+<pre class="src src-org"><span style="font-weight: bold;">* </span><span style="font-weight: bold;">TODO</span><span style="font-weight: bold;"> Install ergoemacs-mode  |</span>
+</pre>
+
+
+<p>
+By pressing the beginning of line command, you would go to:
+</p>
+
+
+
+
+<pre class="src src-org"><span style="font-weight: bold;">* </span><span style="font-weight: bold;">TODO</span><span style="font-weight: bold;"> |Install ergoemacs-mode  </span>
+</pre>
+
+
+<p>
+As hoped/expected.
+</p>
+</div>
 
 </div>
 
@@ -250,7 +286,9 @@ replaces the <code>move-beginning-line</code> with whatever the mode defines
 <h3 id="sec-2"><kbd class="dark">E</kbd>nd of line</h3>
 <div class="outline-text-3" id="text-2">
 
-<p>The end of line command for ergoemacs is just as smart as beginning
+
+<p>
+The end of line command for ergoemacs is just as smart as beginning
 of line.  For example if your cursor is <code>|</code>, and you are at:
 </p>
 
