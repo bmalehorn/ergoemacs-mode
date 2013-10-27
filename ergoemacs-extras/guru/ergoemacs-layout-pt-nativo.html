@@ -160,7 +160,7 @@
 <tr><td>Duplicate</td><td>【<kbd>Alt</kbd>+<kbd>;</kbd>】</td><td>cmt dwim</td><td>comment-dwim</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>Alt</kbd>+<kbd>g</kbd> <kbd>Alt</kbd>+<kbd>g</kbd>】</td><td>Goto</td><td>goto-line</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>Alt</kbd>+<kbd>g</kbd> <kbd>g</kbd>】</td><td>Goto</td><td>goto-line</td></tr>
-<tr><td>Duplicate</td><td>【<kbd>Alt</kbd>+<kbd>m</kbd>】</td><td>← line/¶</td><td>ergoemacs-beginning-of-line-or-block</td></tr>
+<tr><td>Duplicate</td><td>【<kbd>Alt</kbd>+<kbd>m</kbd>】</td><td>← line/¶</td><td>ergoemacs-beginning-of-line-or-what</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>Alt</kbd>+<kbd>Ç</kbd>】</td><td>✂ all</td><td>ergoemacs-cut-all</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>Alt</kbd>+<kbd>ç</kbd>】</td><td>✂ region</td><td>ergoemacs-cut-line-or-region</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>Alt</kbd>+DEL】</td><td>⌫ word</td><td>backward-kill-word</td></tr>
@@ -181,7 +181,8 @@
 <tr><td>Duplicate</td><td>【<kbd>Ctrl</kbd>+SPC】</td><td>Set Mark</td><td>set-mark-command</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>d</kbd>】</td><td>← bracket</td><td>ergoemacs-backward-open-bracket</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>e</kbd>】</td><td>prev pane</td><td>ergoemacs-move-cursor-previous-pane</td></tr>
-<tr><td>Duplicate</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>m</kbd>】</td><td>→ line/¶</td><td>ergoemacs-end-of-line-or-block</td></tr>
+<tr><td>Duplicate</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>m</kbd>】</td><td>→ line/¶</td><td>ergoemacs-end-of-line-or-what</td></tr>
+<tr><td>Duplicate</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>q</kbd>】</td><td>↓ Bottom*</td><td>ergoemacs-end-or-beginning-of-buffer</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>r</kbd>】</td><td>→ bracket</td><td>ergoemacs-forward-close-bracket</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>begin</kbd>】</td><td>↑ Top</td><td>beginning-of-buffer</td></tr>
 <tr><td>Duplicate</td><td>【<kbd>deleteline</kbd>】</td><td>⌦ line</td><td>kill-line</td></tr>
@@ -205,16 +206,20 @@
 <tr><td>Ergonomic Misc</td><td>【<kbd>Alt</kbd>+<kbd>7</kbd>】</td><td>Sel. Line</td><td>ergoemacs-select-current-line</td></tr>
 <tr><td>Ergonomic Misc</td><td>【<kbd>Alt</kbd>+<kbd>e</kbd>】</td><td>next pane</td><td>ergoemacs-move-cursor-next-pane</td></tr>
 <tr><td>Ergonomic Misc</td><td>【<kbd>Alt</kbd>+<kbd>j</kbd>】</td><td>copy</td><td>ergoemacs-copy-line-or-region</td></tr>
+<tr><td>Ergonomic Misc</td><td>【<kbd>Alt</kbd>+<kbd>q</kbd>】</td><td>↑ Top*</td><td>ergoemacs-beginning-or-end-of-buffer</td></tr>
 <tr><td>Ergonomic Misc</td><td>【<kbd>Alt</kbd>+<kbd>x</kbd>】</td><td>↯ compl</td><td>ergoemacs-call-keyword-completion</td></tr>
 <tr><td>Ergonomic Misc</td><td>【<kbd>Alt</kbd>+<kbd>z</kbd>】</td><td>tog. case</td><td>ergoemacs-toggle-letter-case</td></tr>
 <tr><td>Ergonomic Misc</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>j</kbd>】</td><td>Copy all</td><td>ergoemacs-copy-all</td></tr>
 <tr><td>Ergonomic Misc</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>z</kbd>】</td><td>tog. camel</td><td>ergoemacs-toggle-camel-case</td></tr>
-<tr><td>Ergonomic Misc</td><td>【<kbd>end</kbd>】</td><td>→ line/¶</td><td>ergoemacs-end-of-line-or-block</td></tr>
-<tr><td>Ergonomic Misc</td><td>【<kbd>home</kbd>】</td><td>← line/¶</td><td>ergoemacs-beginning-of-line-or-block</td></tr>
+<tr><td>Ergonomic Misc</td><td>【<kbd>end</kbd>】</td><td>→ line/¶</td><td>ergoemacs-end-of-line-or-what</td></tr>
+<tr><td>Ergonomic Misc</td><td>【<kbd>home</kbd>】</td><td>← line/¶</td><td>ergoemacs-beginning-of-line-or-what</td></tr>
 <tr><td>Ergonomic Movement</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>c</kbd>】</td><td>→ ¶</td><td>ergoemacs-forward-block</td></tr>
 <tr><td>Ergonomic Movement</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>l</kbd>】</td><td>← ¶</td><td>ergoemacs-backward-block</td></tr>
 <tr><td>Ergonomic Unchorded</td><td>【<kbd>menu</kbd> <kbd>,</kbd>】</td><td>Close Buf.</td><td>ergoemacs-close-current-buffer</td></tr>
+<tr><td>Ergonomic Unchorded</td><td>【<kbd>menu</kbd> <kbd>h</kbd> <kbd>Alt</kbd>+<kbd>g</kbd>】</td><td>Goto</td><td>goto-line</td></tr>
+<tr><td>Ergonomic Unchorded</td><td>【<kbd>menu</kbd> <kbd>h</kbd> <kbd>g</kbd>】</td><td>Goto</td><td>goto-line</td></tr>
 <tr><td>Ergonomic Unchorded</td><td>【<kbd>menu</kbd> <kbd>j</kbd>】</td><td>copy</td><td>ergoemacs-copy-line-or-region</td></tr>
+<tr><td>Ergonomic Unchorded</td><td>【<kbd>menu</kbd> <kbd>l</kbd>】</td><td>()</td><td>ergoemacs-smart-punctuation</td></tr>
 <tr><td>Ergonomic Unchorded</td><td>【<kbd>menu</kbd> <kbd>q</kbd> <kbd>c</kbd>】</td><td>calc</td><td>calc</td></tr>
 <tr><td>Ergonomic Unchorded</td><td>【<kbd>menu</kbd> <kbd>q</kbd> <kbd>f</kbd>】</td><td>OS Dir</td><td>ergoemacs-open-in-desktop</td></tr>
 <tr><td>Ergonomic Unchorded</td><td>【<kbd>menu</kbd> <kbd>q</kbd> <kbd>g</kbd>】</td><td>grep</td><td>grep</td></tr>
@@ -303,8 +308,9 @@
 <tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>o</kbd> <kbd>Alt</kbd>+<kbd>s</kbd>】</td><td></td><td>center-line</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>o</kbd> <kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>s</kbd>】</td><td></td><td>center-paragraph</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>o</kbd>】</td><td></td><td>ergoemacs-M-o</td></tr>
-<tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>p</kbd> .. <kbd>Alt</kbd>+<kbd>u</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>p</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>prior</kbd>】</td><td></td><td>scroll-other-window-down</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>r</kbd> .. <kbd>Alt</kbd>+<kbd>u</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>s</kbd> <kbd>h</kbd> <kbd>f</kbd>】</td><td></td><td>hi-lock-find-patterns</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>s</kbd> <kbd>h</kbd> <kbd>l</kbd>】</td><td></td><td>highlight-lines-matching-regexp</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>Alt</kbd>+<kbd>s</kbd> <kbd>h</kbd> <kbd>p</kbd>】</td><td></td><td>highlight-phrase</td></tr>
@@ -565,7 +571,6 @@
 <tr><td>Unclassified</td><td>【<kbd>Ctrl</kbd>+<kbd>⇧Shift</kbd>+<kbd>v</kbd> .. <kbd>Ctrl</kbd>+<kbd>⇧Shift</kbd>+<kbd>x</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>b</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>i</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
-<tr><td>Unclassified</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>q</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>s</kbd> .. <kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>t</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>M</kbd><kbd>⇧Shift</kbd>+<kbd>w</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>again</kbd>】</td><td></td><td>repeat-complex-command</td></tr>
@@ -671,10 +676,16 @@
 <tr><td>Unclassified</td><td>【<kbd>left</kbd>】</td><td></td><td>ergoemacs-undefined</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>make-frame-visible</kbd>】</td><td></td><td>ignore-event</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>2</kbd> .. <kbd>menu</kbd> <kbd>5</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
-<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>a</kbd> .. <kbd>menu</kbd> <kbd>e</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>a</kbd> .. <kbd>menu</kbd> <kbd>c</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>e</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>h</kbd> <kbd>Alt</kbd>+<kbd>n</kbd>】</td><td></td><td>next-error</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>h</kbd> <kbd>Alt</kbd>+<kbd>p</kbd>】</td><td></td><td>previous-error</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>h</kbd> <kbd>c</kbd>】</td><td></td><td>goto-char</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>h</kbd> <kbd>n</kbd>】</td><td></td><td>next-error</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>h</kbd> <kbd>p</kbd>】</td><td></td><td>previous-error</td></tr>
+<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>h</kbd> TAB】</td><td></td><td>move-to-column</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>i</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>m</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
-<tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>menu</kbd> <kbd>d</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>o</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>return</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>menu</kbd> <kbd>u</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
@@ -689,7 +700,6 @@
 <tr><td>Unclassified</td><td>【<kbd>right</kbd>】</td><td></td><td>ergoemacs-undefined</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>select-window</kbd>】</td><td></td><td>handle-select-window</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>switch-frame</kbd>】</td><td></td><td>handle-switch-frame</td></tr>
-<tr><td>Unclassified</td><td>【<kbd>timeout</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>up</kbd>】</td><td></td><td>ergoemacs-undefined</td></tr>
 <tr><td>Unclassified</td><td>【<kbd>⇧Shift</kbd>+<kbd>insert</kbd>】</td><td></td><td>ergoemacs-shortcut</td></tr>
 <tr><td>Unclassified</td><td>【ESC <kbd>Ctrl</kbd>+<kbd>backspace</kbd>】</td><td></td><td>backward-kill-sexp</td></tr>
