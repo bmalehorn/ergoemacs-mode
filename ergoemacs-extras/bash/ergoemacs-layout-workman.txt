@@ -9,29 +9,29 @@
 # place this file in your home dir. e.g. ~/.inputrc
 # restart your terminal. Then, bash's keybinding for editing
 # should be like ErgoEmacs.
-# If no key works, try replace all \M- to \e. That's means change Meta to Esc key.
+# If no key works, try replace all \e to \M-. That's means change Esc to Meta key.
 
 # doc about how to edit the bash keybinding, see:
 # http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html
 
 set editing-mode emacs
 
-"\M-k": backward-char
-"\M-;": forward-char
-"\M-b": previous-history
-"\M-d": next-history
-"\M-j": beginning-of-line
-"\M-J": end-of-line
-"\M-F": backward-word
-"\M-P": forward-word
-"\M-g": kill-line
-"\M-e": backward-kill-word
-"\M-r": kill-word
-"\M-h": backward-delete-char
-"\M-f": delete-char
-"\M-z": undo
-"\M-x": kill-region
-"\M-m": copy-region-as-kill
-"\M-M": yank
-"\M-;": forward-search-history
-"\M-:": reverse-search-history
+"\ek": backward-char
+"\e;": forward-char
+"\ev": previous-history
+"\ed": next-history
+"\ej": beginning-of-line
+"\eJ": end-of-line
+"\eF": backward-word
+"\eP": forward-word
+"\eg": kill-line
+"\ee": backward-kill-word
+"\er": kill-word
+"\eh": backward-delete-char
+"\ef": delete-char
+"\ez": undo
+"\ex": kill-region
+"\em": copy-region-as-kill
+"\eM": yank
+"\e;": forward-search-history
+"\e:": reverse-search-history

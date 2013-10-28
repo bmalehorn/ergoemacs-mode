@@ -30,9 +30,9 @@
      inkscape:window-height="848"
      id="namedview4026"
      showgrid="false"
-     inkscape:zoom="1.0779651"
-     inkscape:cx="408.65628"
-     inkscape:cy="384.05695"
+     inkscape:zoom="1.2231896"
+     inkscape:cx="588.625"
+     inkscape:cy="360.96173"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -4658,7 +4658,7 @@
        sodipodi:role="line"
        id="tspan3507-9-6"
        x="434.23056"
-       y="253.17313"></tspan></text>
+       y="253.17313">flyspell</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:11.85218239px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
@@ -5570,7 +5570,7 @@
        sodipodi:role="line"
        id="tspan3507-4-3-0-0-8"
        x="552.53925"
-       y="360.43158">← line/¶</tspan></text>
+       y="360.43158">← line/*</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:11.85218239px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#db3027;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
@@ -5582,7 +5582,7 @@
        sodipodi:role="line"
        id="tspan3507-4-3-0-0"
        x="552.53925"
-       y="348.57938">→ line/¶</tspan></text>
+       y="348.57938">→ line/*</tspan></text>
   <text
      sodipodi:linespacing="125%"
      style="font-size:19.75363731px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica Bold"
@@ -5858,7 +5858,7 @@
    style="font-size:19.75363731px;font-weight:bold;text-align:start;text-anchor:start;font-family:Helvetica;-inkscape-font-specification:Helvetica Bold"
    id="tspan3182-4-7-1-0"
    y="335.17441"
-   x="917.24951">&#x06F3;</tspan>&#x200D;</text>
+   x="917.24951">&#x06A9;</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:11.85218239px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000080;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
@@ -6518,7 +6518,7 @@
        sodipodi:role="line"
        id="tspan3507-0-4-48-3-1-7"
        x="602.29791"
-       y="457.14203">↑ Top</tspan></text>
+       y="457.14203">↑ Top*</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:11.85218239px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#db3027;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
@@ -6530,7 +6530,7 @@
        sodipodi:role="line"
        id="tspan3507-0-4-48-3-1"
        x="602.29791"
-       y="445.28986">↓ Bottom</tspan></text>
+       y="445.28986">↓ Bottom*</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:11.85218239px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
@@ -7833,7 +7833,7 @@
        style="font-size:19.75363731px;font-weight:bold;text-align:start;text-anchor:start;font-family:Helvetica;-inkscape-font-specification:Helvetica Bold"
        id="tspan3182-4-9-8"
        y="145.3804"
-       x="202.94966">4</tspan></text>
+       x="202.94966">&#x06F3;</tspan></text>
   <text
      sodipodi:linespacing="125%"
      style="font-size:19.75363731px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica Bold"

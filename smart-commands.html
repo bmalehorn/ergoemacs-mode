@@ -366,6 +366,34 @@ end-of-line commands (like in <code>org-mode</code>).
 <h3 id="sec-3"><kbd class="dark">B</kbd>eginning or end of buffer</h3>
 <div class="outline-text-3" id="text-3">
 
+<p>This smart will:
+</p><ol>
+<li>Goto the beginning of the buffer
+</li>
+<li>If at the beginning of the buffer it will go to the end of the buffer.
+</li>
+</ol>
+
+
+<p>
+If you want to go to the beginning of the buffer only, you can turn it
+of by setting <code>ergoemacs-repeatable-beginning-or-end-of-buffer</code> to
+nil:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-repeatable-beginning-or-end-of-buffer nil)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4"><kbd class="dark">S</kbd>mart punctuation</h3>
+<div class="outline-text-3" id="text-4">
 
 </div>
 </div>
