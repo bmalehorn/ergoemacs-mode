@@ -392,8 +392,46 @@ nil:
 </div>
 
 <div id="outline-container-4" class="outline-3">
-<h3 id="sec-4"><kbd class="dark">S</kbd>mart punctuation</h3>
+<h3 id="sec-4"><kbd class="dark">P</kbd>aste</h3>
 <div class="outline-text-3" id="text-4">
+
+<p>Ergoemacs can allow a paste command to cycle through the previous
+items that were copied.  This can be enabled by:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-smart-paste t)
+</pre>
+
+
+<p>
+In this case <kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd>:
+</p><ul>
+<li>Pastes the first item
+</li>
+<li>Upon repeating, <kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd> cycles through previous items pasted.
+</li>
+</ul>
+
+
+<p>
+If you wish to paste an item twice, you can use <kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+v.
+</p>
+<p>
+When this is disabled (default), the <kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd> only pastes and
+<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+v cycles through the previous items pasted.
+</p>
+<p>
+By taking away the shift key, it reduces pinky usage.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-3">
+<h3 id="sec-5"><kbd class="dark">S</kbd>mart punctuation</h3>
+<div class="outline-text-3" id="text-5">
 
 </div>
 </div>

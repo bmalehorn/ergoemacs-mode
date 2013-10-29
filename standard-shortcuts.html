@@ -152,67 +152,6 @@ Standard shortcuts for cursor navigation are also supported. For example:
 </ul>
 
 
-<p>
-The ergoemacs fixed keys are given by:
-</p>
-<p>
-|-
-| Standard Name | Ergoemacs Key | Emacs Key | Emacs Command Name |
-|-| +Font Size | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">+</kbd>] |  | =text-scale-increase= |
-| +Font Size | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">=</kbd>] |  | =text-scale-increase= |
-| -Font Size | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">-</kbd>] |  | =text-scale-decrease= |
-| Alt mode | [F6] |  | =ergoemacs-toggle-full-alt= |
-| Close Buf. | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">W</kbd>] |  | =ergoemacs-close-current-buffer= |
-| Copy all | [<kbd class="dark">Alt</kbd>+<kbd class="dark">f</kbd>3] |  | =ergoemacs-copy-all= |
-| Copy all | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd>3] |  | =ergoemacs-copy-all= |
-| Copy | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">C</kbd>] |  | =ergoemacs-ctl-c= |
-| Copy | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+C] |  | == |
-| Cut | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+X] |  | == |
-| Cut | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">X</kbd>] |  | =ergoemacs-ctl-x= |
-| Edit File | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">O</kbd>] |  | =find-file= |
-| Goto | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">L</kbd>] |  | =goto-line= |
-| Info | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">/</kbd>] |  | =info= |
-| Info | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">?</kbd>] |  | =info= |
-| New Buffer | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">N</kbd>] |  | =ergoemacs-new-empty-buffer= |
-| New Frame | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+N] |  | =make-frame-command= |
-| Next | [F12] |  | =next-line= |
-| OS Open | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+O] |  | =ergoemacs-open-in-external-app= |
-| Occur | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+F] |  | =occur= |
-| Open Last | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+T] |  | =ergoemacs-open-last-closed= |
-| Paste | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">V</kbd>] |  | =yank= |
-| Previous | [F11] |  | =previous-line= |
-| Print | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">P</kbd>] |  | =ergoemacs-print-buffer-confirm= |
-| Quit | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">.</kbd>] |  | =keyboard-quit= |
-| Redo | [<kbd class="dark">Alt</kbd>+<kbd class="dark">f</kbd>5] |  | =redo= |
-| Redo | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd>5] |  | =redo= |
-| Save As | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+S] |  | =write-file= |
-| Save | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>] |  | =save-buffer= |
-| Search | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">F</kbd>] |  | =isearch-forward= |
-| Select all | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">A</kbd>] |  | =mark-whole-buffer= |
-| Undo | [F5] |  | =undo= |
-| copy | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">i</kbd>nsert] |  | =ergoemacs-copy-line-or-region= |
-| copy | [F3] |  | =ergoemacs-copy-line-or-region= |
-| paste | [F4] |  | =yank= |
-| paste | [Shift+insert] |  | =yank= |
-| paste ↑ | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+V] |  | =yank-pop= |
-| paste ↑ | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd>4] |  | =yank-pop= |
-| × Frame | [<kbd class="dark">Alt</kbd>+<kbd class="dark">f</kbd>4] |  | =delete-frame= |
-| × Frame | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+W] |  | =delete-frame= |
-| ↑ Top | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">h</kbd>ome] |  | =beginning-of-buffer= |
-| ↓ Bottom | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">e</kbd>nd] |  | =end-of-buffer= |
-| ↔ Frame | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">`</kbd>] |  | =other-frame= |
-| ↶ undo | [<kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd>ackspace] |  | =undo= |
-| ↶ undo | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">Z</kbd>] |  | =undo= |
-| ↷ redo | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+Z] |  | =redo= |
-| ↷ redo | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">Y</kbd>] |  | =redo= |
-| ⌦ word | [<kbd class="dark">Alt</kbd>+<kbd class="dark">d</kbd>elete] |  | =kill-word= |
-| ✂ all | [<kbd class="dark">Alt</kbd>+<kbd class="dark">f</kbd>2] |  | =ergoemacs-cut-all= |
-| ✂ all | [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd>2] |  | =ergoemacs-cut-all= |
-| ✂ region | [F2] |  | =ergoemacs-cut-line-or-region= |
-| ✂ region | [Shift+delete] |  | =ergoemacs-cut-line-or-region= |
-|-
-
-</p>
   </div>
 </article>
       </div>
