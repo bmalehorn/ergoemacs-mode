@@ -219,8 +219,8 @@ key, you can use:
 
 
 <p>
-This uses <a href="http://www.emacswiki.org/emacs/EmacsKeyNotation">emacs key notation</a>.  In short <code>M-a</code> represents <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>, <code>C-a</code>
-represents <kbd class="dark">Ctl</kbd>+<kbd class="dark"></kbd>.  For these two examples the key is bound to emacs function
+This uses <a href="http://www.emacswiki.org/emacs/EmacsKeyNotation">emacs key notation</a>.  In short <code>M-a</code> represents <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>, <code>C-a</code>
+represents <kbd class="dark">Ctl</kbd>+<kbd class="dark">a</kbd>.  For these two examples the key is bound to emacs function
 <code>backward-char</code>.
 </p>
 <p>
@@ -275,7 +275,7 @@ The keyboard definition for <code>backward-char</code> is ignored when
 
 
 <p>
-then ergoemacs-mode will respect the <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> backward character
+then ergoemacs-mode will respect the <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd> backward character
 assignment.  
 </p>
 <p>
@@ -296,7 +296,7 @@ this behavior, you can turn it off by:
 
 
 <p>
-In this example <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> will be bound to <code>backward-char</code> for
+In this example <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd> will be bound to <code>backward-char</code> for
 ergoemacs-mode as well as globally.
 </p>
 <p>
@@ -322,7 +322,7 @@ you can also ignore them by using the following code
 One of the disadvantages of using globally defined keys it they will
 be bound globally even if <code>ergoemacs-mode</code> is not active.
 Additionally, they are not Layout independent.  For example, defining
-<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> on QWERTY will not change to <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> for colemak.  
+<kbd class="dark">Alt</kbd>+<kbd class="dark">j</kbd> on QWERTY will not change to <kbd class="dark">Alt</kbd>+<kbd class="dark">n</kbd> for colemak.  
 </p></div>
 </div>
 </div>

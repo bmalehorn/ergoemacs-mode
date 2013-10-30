@@ -144,7 +144,7 @@ the beginning of the comment:
 
 
 <p>
-That way you can delete and change the commment (With QWERTY 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】).
+That way you can delete and change the commment (With QWERTY 【<kbd class="dark">Alt</kbd>+<kbd class="dark">g</kbd>】).
 </p>
 <p>
 You may even want to go to  the end of the code line:
@@ -158,7 +158,7 @@ You may even want to go to  the end of the code line:
 
 
 <p>
-That way you can delete the comment entirely (With QWERTY 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】).
+That way you can delete the comment entirely (With QWERTY 【<kbd class="dark">Alt</kbd>+<kbd class="dark">g</kbd>】).
 </p>
 <p>
 Often you may want to go back to the first non-whitespace character
@@ -198,7 +198,7 @@ again.  So, you may wish to:
 
 <p>
 All of these can be accomplished by the smart ergoemacs-mode
-<code>beginning-of-line</code> function, which is  bound to 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】.
+<code>beginning-of-line</code> function, which is  bound to 【<kbd class="dark">Alt</kbd>+<kbd class="dark">h</kbd>】.
 </p>
 <p>
 If you don't want ergoemacs-mode to ignore comments when going to the
@@ -334,7 +334,7 @@ The after that you can:
 
 
 <p>
-Currently this command is bound to 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】
+Currently this command is bound to 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">h</kbd>】
 </p>
 <p>
 You can ignore the comment feature by the following initialization code:
@@ -399,11 +399,11 @@ nil:
 items that were copied.  
 </p>
 <p>
-In this case <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>:
+In this case <kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd>:
 </p><ul>
 <li>Pastes the first item
 </li>
-<li>Upon repeating, <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> cycles through previous items pasted.
+<li>Upon repeating, <kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd> cycles through previous items pasted.
 </li>
 </ul>
 
@@ -413,11 +413,11 @@ Note that if you move/type then this pattern repeats itself, you will
 paste and then cycle through the items pasted.
 </p>
 <p>
-If you wish to paste an item twice, you can use <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>.
+If you wish to paste an item twice, you can use <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">v</kbd>.
 </p>
 <p>
-When this is disabled, the <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> only pastes and
-<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd> cycles through the previous items pasted.  This can be
+When this is disabled, the <kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd> only pastes and
+<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">v</kbd> cycles through the previous items pasted.  This can be
 disabled by
 </p>
 
@@ -435,10 +435,10 @@ This is enabled by default because it reduces pinky usage.
 When installed, ergoemacs' smart paste can also use browse-kill-ring
 </p>
 <p>
-When calling <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd> if the last command was not a paste, it
+When calling <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">v</kbd> if the last command was not a paste, it
 starts browsing the kill ring.  The standard ergoemacs-mode keys
-apply.  Pressing <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> or <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> will cycle forward through the kill
-ring.  Pressing <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd> or <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> will cycle backward
+apply.  Pressing <kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd> or <kbd class="dark">Alt</kbd>+<kbd class="dark">v</kbd> will cycle forward through the kill
+ring.  Pressing <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">v</kbd> or <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark">v</kbd> will cycle backward
 through the kill ring.  To accept the text, press enter.
 </p>
 <p>

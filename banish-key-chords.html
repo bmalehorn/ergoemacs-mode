@@ -159,12 +159,12 @@ can be classified into 2 types:
 <div class="outline-text-4" id="text-1-2">
 
 <p>The Repeatable Commands must have keys that can be held down. Here's
-example of repeatable hotkeys: F8, t, ⇟ Page ▽, ↓, 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】,
-【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】, ….
+example of repeatable hotkeys: F8, t, ⇟ Page ▽, ↓, 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">t</kbd>】,
+【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark">8</kbd>】, ….
 </p>
 <p>
 Non-repeatable hotkeys are basically keys that involves a sequence:
-【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> 2】, 【F8 F9】
+【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> 2】, 【F8 F9】
 </p>
 <p>
 So, when designing a shortcut system, one of the principle is for
@@ -174,16 +174,16 @@ commands in common use.)
 </p>
 <p>
 In GNU Emacs's default keybinding, there are many such wastes. For
-example, all 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>number›】 and 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>number›】 are bound to
+example, all 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">‹</kbd>number›】 and 【<kbd class="dark">Alt</kbd>+<kbd class="dark">‹</kbd>number›】 are bound to
 digit-argument. The digit-argument is a non-repeat command, yet it
 sits on 20 EASY repeatable keys. (but most damaging is that
 digit-argument isn't a frequently needed command, with respect to all
 commands and the relatively few easy-key-spots.)
 </p>
 <p>
-Another bad example is forward-page 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> ]】. forward-page is a
+Another bad example is forward-page 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> ]】. forward-page is a
 repeatable command, but it doesn't have a repeating key. Imagine, if
-every time you need to ⇟ Page ▽ that you have to press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】
+every time you need to ⇟ Page ▽ that you have to press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>】
 first. You couldn't just hold it down.
 </p>
 <p>
@@ -233,7 +233,7 @@ For QWERTY, an additional mapping of these keys have been made:
 </li>
 <li>The [Alt-] keychords in this modified keymap are changed to
     [Control-] keys.  For example, <code>repeat-complex-command</code> is mapped
-    from [Control-x] [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>] to [Menu] [d] [Control-:].  As far as I
+    from [Control-x] [<kbd class="dark">Alt</kbd>+<kbd class="dark">:</kbd>] to [Menu] [d] [Control-:].  As far as I
     can tell this is the only [Control-x] [Alt] combination. 
 
 </li>
@@ -254,12 +254,12 @@ For QWERTY, an additional mapping of these keys have been made:
 
 </li>
 <li>Chorded key combinations that are single key are translated to
-    [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> for example [Control+k] [a] is changed to [Menu] [f] [k]
-    [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>]
+    [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> for example [Control+k] [a] is changed to [Menu] [f] [k]
+    [<kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>]
 
 </li>
-<li>Chorded key combinations that work with [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> are translated to
-    [Control+].  For example [Control+k] [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>] is changed to [Menu]
+<li>Chorded key combinations that work with [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> are translated to
+    [Control+].  For example [Control+k] [<kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>] is changed to [Menu]
     [f] [k] [Control+a].  I don't think there are currently any keys
     bound to these types of key combinations.  They are quite
     difficult to press and remember.
@@ -303,7 +303,7 @@ also bound to [Menu] [y] for the unchorded Control-h keymap.
   [Menu] key.
 <ul>
 <li>Shifted keys still are allowed.  For example, page up can be
-    accomplished in QWERTY by [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>].
+    accomplished in QWERTY by [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">i</kbd>].
 </li>
 <li>Any command that enters the minibuffer also exits the repeatable
     movement/deletion.
@@ -325,7 +325,7 @@ also bound to [Menu] [y] for the unchorded Control-h keymap.
     insert the character
 </li>
 <li>Shift and the key is the unshifted command.  Therefore [Menu] [i]
-    [i] [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>] would be Page Up followed by down one character.
+    [i] [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">k</kbd>] would be Page Up followed by down one character.
 </li>
 </ul>
 
@@ -341,10 +341,10 @@ also bound to [Menu] [y] for the unchorded Control-h keymap.
 <h5 id="sec-2-2-2">Method #2 &ndash; Modal Ergoemacs-mode</h5>
 <div class="outline-text-5" id="text-2-2-2">
 
-<p>You can press [F6] to get all the [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> commands bound letters
-themselves.  For example [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>] is bound to [k].  [<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd> keys
-are bound to [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd> or [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> keys.  Hence, [<Kbd Class="Dark">⇧ Shift</kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>] is bound
-to both [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>] and  [<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>].  To exit ergoemacs modal mode, you
+<p>You can press [F6] to get all the [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> commands bound letters
+themselves.  For example [<kbd class="dark">Alt</kbd>+<kbd class="dark">k</kbd>] is bound to [k].  [<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">]</kbd> keys
+are bound to [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">]</kbd> or [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> keys.  Hence, [<Kbd Class="Dark">⇧ Shift</kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark">m</kbd>] is bound
+to both [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">m</kbd>] and  [<kbd class="dark">Alt</kbd>+<kbd class="dark">m</kbd>].  To exit ergoemacs modal mode, you
 can press [Return] or [F6].  
 </p></div>
 </div>

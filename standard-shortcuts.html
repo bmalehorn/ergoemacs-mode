@@ -124,16 +124,16 @@ This shows the standard shortcuts implemented in ergoemacs:
 <tr><th scope="col" class="left">Standard Name</th><th scope="col" class="left">Ergoemacs-key</th><th scope="col" class="left">Emacs Key</th><th scope="col" class="left">Emacs Command Name</th></tr>
 </thead>
 <tbody>
-<tr><td class="left">Copy</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd></td><td class="left"><code>kill-ring-save</code></td></tr>
-<tr><td class="left">Cut</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><kbd class="dark">Ctl</kbd>+<kbd class="dark"></kbd></td><td class="left"><code>kill-region</code></td></tr>
-<tr><td class="left">Paste</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><code>yank</code></td></tr>
-<tr><td class="left">Undo</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> or <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><code>undo</code></td></tr>
-<tr><td class="left">Redo</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd> or <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left">NA</td><td class="left"><code>redo</code></td></tr>
-<tr><td class="left">Open New File</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left">NA</td><td class="left">Not builtin</td></tr>
-<tr><td class="left">Open</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><code>find-file</code></td></tr>
-<tr><td class="left">Print</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left">NA</td><td class="left"></td></tr>
-<tr><td class="left">Select All</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"></td><td class="left"><code>mark-whole-buffer</code></td></tr>
-<tr><td class="left">Find</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd></td><td class="left"><code>search-forward</code></td></tr>
+<tr><td class="left">Copy</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd></td><td class="left"><kbd class="dark">Alt</kbd>+<kbd class="dark">w</kbd></td><td class="left"><code>kill-ring-save</code></td></tr>
+<tr><td class="left">Cut</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd></td><td class="left"><kbd class="dark">Ctl</kbd>+<kbd class="dark">w</kbd></td><td class="left"><code>kill-region</code></td></tr>
+<tr><td class="left">Paste</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">y</kbd></td><td class="left"><code>yank</code></td></tr>
+<tr><td class="left">Undo</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">z</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">_</kbd> or <kbd class="dark">Ctrl</kbd>+<kbd class="dark">/</kbd></td><td class="left"><code>undo</code></td></tr>
+<tr><td class="left">Redo</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">z</kbd> or <kbd class="dark">Ctrl</kbd>+<kbd class="dark">y</kbd></td><td class="left">NA</td><td class="left"><code>redo</code></td></tr>
+<tr><td class="left">Open New File</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">n</kbd></td><td class="left">NA</td><td class="left">Not builtin</td></tr>
+<tr><td class="left">Open</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">o</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd></td><td class="left"><code>find-file</code></td></tr>
+<tr><td class="left">Print</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">p</kbd></td><td class="left">NA</td><td class="left"></td></tr>
+<tr><td class="left">Select All</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">a</kbd></td><td class="left"></td><td class="left"><code>mark-whole-buffer</code></td></tr>
+<tr><td class="left">Find</td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd></td><td class="left"><kbd class="dark">Ctrl</kbd>+<kbd class="dark">s</kbd></td><td class="left"><code>search-forward</code></td></tr>
 </tbody>
 </table>
 
@@ -143,11 +143,11 @@ This shows the standard shortcuts implemented in ergoemacs:
 Standard shortcuts for cursor navigation are also supported. For example:
 </p>
 <ul>
-<li><kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> ⇒ move cursor to to previous word.
+<li><kbd class="dark">Ctrl</kbd>+<kbd class="dark">←</kbd> ⇒ move cursor to to previous word.
 </li>
 <li><kbd class="dark">Home</kbd> ⇒ move cursor to beginning of line.
 </li>
-<li>⇧ <kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd> select text downward.
+<li>⇧ <kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">↓</kbd> select text downward.
 </li>
 </ul>
 
