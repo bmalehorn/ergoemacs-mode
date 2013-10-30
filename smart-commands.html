@@ -425,6 +425,28 @@ When this is disabled (default), the <kbd class="dark">Ctrl</kbd>+<kbd class="da
 <p>
 By taking away the shift key, it reduces pinky usage.
 </p>
+<p>
+When installed, ergoemacs' smart paste will also use browse-kill-ring
+</p>
+<p>
+When calling <kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+v if the last command was not a paste, it
+starts browsing the kill ring.  The standard ergoemacs-mode keys
+apply.  Pressing <kbd class="dark">Ctrl</kbd>+<kbd class="dark">v</kbd> or <kbd class="dark">Alt</kbd>+<kbd class="dark">v</kbd> will cycle forward through the kill
+ring.  Pressing <kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+v or <kbd class="dark">Ctrl</kbd>+<kbd class="dark">A</kbd>lt+v will cycle backward
+through the kill ring.  To accept the text, press enter.
+</p>
+<p>
+If you want the second paste to call <code>browse-kill-ring</code>, you can
+enable this by:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-smart-paste 'browse-kill-ring)
+</pre>
+
+
+
 </div>
 
 </div>
