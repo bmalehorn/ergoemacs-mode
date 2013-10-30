@@ -257,9 +257,9 @@ Here's some technical description:
 </li>
 <li>Added the customizable variable `ergoemacs-fixed-layout' which
   defines keys that are the same regardless of the layout.  This
-  includes standard keys such as 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">s</kbd>】 for saving. For this
-  layout I added 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">z</kbd>】 for undo, 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+z】 for redo,
-  【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">y</kbd>】 for redo
+  includes standard keys such as 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 for saving. For this
+  layout I added 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 for undo, 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 for redo,
+  【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 for redo
 
 </li>
 <li>Added the customizable variable `ergoemacs-minor-mode-layout'.  From
@@ -307,11 +307,11 @@ format to be read by ErgoEmacs emacs lisp code.
 
 
 <p>
-The command for cancel “keyboard-quit” is changed from QWERTY 【<kbd class="dark">Alt</kbd>+<kbd class="dark">n</kbd>】
+The command for cancel “keyboard-quit” is changed from QWERTY 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
 to 【Esc】. Reason: I think it's overall slightly better, because: ①
 it's more familiar. ② involves a single key. The disadvantage is that
 on terminal, Meta can no longer be pressed by 【Esc】 (but can still
-be done by 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">[</kbd>】). I think Esc for Meta is really bad, from the
+be done by 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】). I think Esc for Meta is really bad, from the
 1980s. I think it's rare to find a terminal app today that do not
 support Alt as Meta.
 </p>
@@ -391,8 +391,8 @@ reaching end.
 
 <p>
 • Added a French layout support.
-• Added 【<kbd class="dark">Alt</kbd>+<kbd class="dark">6</kbd>】 for “select-current-block”. Experimental.
-• Added 【<kbd class="dark">Alt</kbd>+<kbd class="dark">7</kbd>】 for “select-current-line”. Experimental.
+• Added 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 for “select-current-block”. Experimental.
+• Added 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 for “select-current-line”. Experimental.
 </p>
 </div>
 
@@ -404,14 +404,14 @@ reaching end.
 
 
 <p>
-• 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+u】 was “beginning-of-defun”, is now “backward-block”
-• 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+o】 was “end-of-defun”, is now “forward-block”
+• 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 was “beginning-of-defun”, is now “backward-block”
+• 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 was “end-of-defun”, is now “forward-block”
 </p>
 <p>
 Rational: after tried the beginning/end of defun, i didn't find it as usable in comparison to backward/forward block. Because, in many modes such as python, HTML, plain text (email, irc, text document), the defun one is useless. However, the move by block is applicable to vast majority of modes.
 </p>
 <p>
-I think the navigation of defun and sexp has one nice key group. e.g. <kbd class="dark">Ctrl</kbd>+<kbd class="dark">A</kbd>lt+arrow move by sexp, and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">A</kbd>lt+home/end does defun. So, that's a nice set there.
+I think the navigation of defun and sexp has one nice key group. e.g. <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>rrow move by sexp, and <Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>ome/end does defun. So, that's a nice set there.
 </p>
 </div>
 
@@ -426,16 +426,16 @@ I think the navigation of defun and sexp has one nice key group. e.g. <kbd class
 </div>
 
 <div id="outline-container-12-1" class="outline-4">
-<h4 id="sec-12-1"><kbd class="dark">C</kbd>hanged behavior of 【<kbd class="dark">Alt</kbd>+<kbd class="dark">‹</kbd>arrow keys›】</h4>
+<h4 id="sec-12-1"><kbd class="dark">C</kbd>hanged behavior of 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>arrow keys›】</h4>
 <div class="outline-text-4" id="text-12-1">
 
 
 <p>
-Before, 【<kbd class="dark">Alt</kbd>+<kbd class="dark">‹</kbd>left/right›】 move cursor backward/forward to left bracket positions, and, 【<kbd class="dark">Alt</kbd>+<kbd class="dark">‹</kbd>up/down›】 does the same to right bracket positions.
+Before, 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>left/right›】 move cursor backward/forward to left bracket positions, and, 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>up/down›】 does the same to right bracket positions.
 </p>
 <p>
-Now, 【<kbd class="dark">Alt</kbd>+<kbd class="dark">←</kbd>】 does “backward-open-bracket”, and 【<kbd class="dark">Alt</kbd>+<kbd class="dark">→</kbd>】 does “forward-closing-bracket”.
-Now, 【<kbd class="dark">Alt</kbd>+<kbd class="dark">↑</kbd>】 and 【<kbd class="dark">Alt</kbd>+<kbd class="dark">↓</kbd>】 does backward/forward block.
+Now, 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 does “backward-open-bracket”, and 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 does “forward-closing-bracket”.
+Now, 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 and 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 does backward/forward block.
 </p>
 <p>
 A “block” is text between empty new lines. (similar to emacs's “paragraph”)
@@ -450,7 +450,7 @@ Rational: Several advantages with the new way.
 ② the new way is more intuitive with emacs. The forward key moves to end of things, and backward to beginning of things.
 </p>
 <p>
-③ advantage of backward/forward block: GNU Emacs has {【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">↑</kbd>】, 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">↓</kbd>】} for backward/forward paragraph. The problem is that “paragraph” is dependent on major mode's syntax table, so the behavior is unpredictable, and “paragraph” isn't well defined in computer language modes. e.g. in “html-mode”, it seems to move in funny way. The new behavior is predicable and useful. It's useful because vast majority of text uses empty lines to separate blocks of text.
+③ advantage of backward/forward block: GNU Emacs has {【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】, 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】} for backward/forward paragraph. The problem is that “paragraph” is dependent on major mode's syntax table, so the behavior is unpredictable, and “paragraph” isn't well defined in computer language modes. e.g. in “html-mode”, it seems to move in funny way. The new behavior is predicable and useful. It's useful because vast majority of text uses empty lines to separate blocks of text.
 </p>
 </div>
 </div>
@@ -466,12 +466,12 @@ Rational: Several advantages with the new way.
 Major change.
 </p>
 <p>
-• 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+j】 was “beginning-of-buffer”, is now “backward-open-bracket”
-• 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+l】 was “end-of-buffer”, is now “forward-close-bracket”
+• 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 was “beginning-of-buffer”, is now “backward-open-bracket”
+• 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 was “end-of-buffer”, is now “forward-close-bracket”
 </p>
 <p>
-• 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+u】 was “backward-paragraph”, is now “beginning-of-defun”
-• 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+o】 was “forward-paragraph”, is now “end-of-defun”
+• 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 was “backward-paragraph”, is now “beginning-of-defun”
+• 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 was “forward-paragraph”, is now “end-of-defun”
 </p>
 <p>
 Rational: the beginning/end of buffer command is not frequently used. Their replacement, the backward/forward bracket is much more useful in any programing language with brackets: (){}[].
@@ -523,7 +523,7 @@ This is experimental change.
 </div>
 
 <div id="outline-container-15-1" class="outline-4">
-<h4 id="sec-15-1"><kbd class="dark">a</kbd>dded 【<kbd class="dark">Alt</kbd>+<kbd class="dark">D</kbd>el】 to delete word to the right.</h4>
+<h4 id="sec-15-1"><kbd class="dark">a</kbd>dded 【<Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK"></KBD>el】 to delete word to the right.</h4>
 <div class="outline-text-4" id="text-15-1">
 
 
@@ -560,10 +560,10 @@ This is experimental change.
 <h4 id="sec-17-1"><kbd class="dark">a</kbd>dded commands to traverse brackets.</h4>
 <div class="outline-text-4" id="text-17-1">
 
-<p>“forward-open-bracket” 【<kbd class="dark">Alt</kbd>+<kbd class="dark">→</kbd>】
-“backward-open-bracket” 【<kbd class="dark">Alt</kbd>+<kbd class="dark">←</kbd>】
-“forward-close-bracket” 【<kbd class="dark">Alt</kbd>+<kbd class="dark">↓</kbd>】
-“backward-close-bracket” 【<kbd class="dark">Alt</kbd>+<kbd class="dark">↑</kbd>】
+<p>“forward-open-bracket” 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
+“backward-open-bracket” 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
+“forward-close-bracket” 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
+“backward-close-bracket” 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
 </p>
 <p>
 Note: other minor modes may over-ride these keys. e.g. “org-mode”.
@@ -611,7 +611,7 @@ to also work on single quotes. e.g. 'some thing'
 <h4 id="sec-18-1"><kbd class="dark">o</kbd>n Windows, now the 【Menu】 key does emacs's “execute-extended-command”,</h4>
 <div class="outline-text-4" id="text-18-1">
 
-<p>just like emacs on linux's default behavior. Rational: This is better than the 【<kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>】. Because 【a】 is pinky, and it involves 2 keys. Now it's single key. Also, this makes it compatible with emacs on linux .
+<p>just like emacs on linux's default behavior. Rational: This is better than the 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】. Because 【a】 is pinky, and it involves 2 keys. Now it's single key. Also, this makes it compatible with emacs on linux .
 </p></div>
 
 </div>
@@ -627,11 +627,11 @@ Rational: this is a highly frequently used command. 【;】 is on home-row, but 
 </div>
 
 <div id="outline-container-18-3" class="outline-4">
-<h4 id="sec-18-3">【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd>】 is now interactive search (“isearch-forward”).</h4>
+<h4 id="sec-18-3">【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 is now interactive search (“isearch-forward”).</h4>
 <div class="outline-text-4" id="text-18-3">
 
 <p>(was “search-forward”)
-Feature incomplete. Need to add repeated 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">f</kbd>】 to invoke next match.
+Feature incomplete. Need to add repeated 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 to invoke next match.
 </p></div>
 
 </div>
@@ -657,11 +657,11 @@ Feature incomplete. Need to add repeated 【<kbd class="dark">Ctrl</kbd>+<kbd cl
 </p>
 <p>
 【F2】      ,cut
-【F3】      ,copy;   【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">F</kbd>3】 ,copy-all
+【F3】      ,copy;   【<Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK"></KBD>3】 ,copy-all
 【F4】     ,paste
 </p>
 <p>
-【F5】      ,undo;    【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">F</kbd>5】 ,redo
+【F5】      ,undo;    【<Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK"></KBD>5】 ,redo
 </p>
 <p>
 【F8】      ,ctl-x-map. Emacs's C-x prefix key.
@@ -682,7 +682,7 @@ Rational: these are single key or single key sequence additional keys. The copy,
 </div>
 
 <div id="outline-container-19-1" class="outline-4">
-<h4 id="sec-19-1"><kbd class="dark">a</kbd>dded  【F1+m】 for “describe-major-mode” and 【F1+o】 for “where-is-old-binding”. Rationale: keep in sync with the 【F1】 = 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">h</kbd>】 equivalence.</h4>
+<h4 id="sec-19-1"><kbd class="dark">a</kbd>dded  【F1+m】 for “describe-major-mode” and 【F1+o】 for “where-is-old-binding”. Rationale: keep in sync with the 【F1】 = 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 equivalence.</h4>
 <div class="outline-text-4" id="text-19-1">
 
 </div>
@@ -698,16 +698,16 @@ Rational: these are single key or single key sequence additional keys. The copy,
 </div>
 
 <div id="outline-container-20-1" class="outline-4">
-<h4 id="sec-20-1"><kbd class="dark">R</kbd>emoved 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+w】 for “delete-frame” (close current window).</h4>
+<h4 id="sec-20-1"><kbd class="dark">R</kbd>emoved 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 for “delete-frame” (close current window).</h4>
 <div class="outline-text-4" id="text-20-1">
 
-<p>rationale: Close Current Window should really follow OS's key convention. Or, in ErgoEmacs, 【<kbd class="dark">Alt</kbd>+<kbd class="dark">F</kbd>4】 does it.  This way, it's more standard. Less keys.
+<p>rationale: Close Current Window should really follow OS's key convention. Or, in ErgoEmacs, 【<Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK"></KBD>4】 does it.  This way, it's more standard. Less keys.
 </p>
 <p>
 On the Mac, current behavior is ok too.
 </p>
 <p>
-The reason for a 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+w】 for closing window doesn't seem strong.
+The reason for a 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 for closing window doesn't seem strong.
 </p></div>
 
 </div>
@@ -775,7 +775,7 @@ Thanks to dek1999@live.com
 </div>
 
 <div id="outline-container-23-1" class="outline-4">
-<h4 id="sec-23-1"><kbd class="dark">2</kbd>012-03-03 Added a command “open-in-external-app”. The key 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+o】 is now bound to it, instead of “open-in-desktop”.</h4>
+<h4 id="sec-23-1"><kbd class="dark">2</kbd>012-03-03 Added a command “open-in-external-app”. The key 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 is now bound to it, instead of “open-in-desktop”.</h4>
 <div class="outline-text-4" id="text-23-1">
 
 
@@ -787,7 +787,7 @@ Thanks to dek1999@live.com
 <h4 id="sec-23-2"><kbd class="dark">2</kbd>011-11-22 GNU emacs's 【C-x d】 for “dired” is no longer unbound (it's available now).</h4>
 <div class="outline-text-4" id="text-23-2">
 
-<p> Originally, it's unbound because the thought was that 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">o</kbd>】 for “find-file” with a dir input is a good clean substitute. But now, i think in some situations, calling dired directly is necessary. For example, calling dired then give “~/emacs/*.html” to list all HTML files. If using “find-file”, it'll try to open all files.
+<p> Originally, it's unbound because the thought was that 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 for “find-file” with a dir input is a good clean substitute. But now, i think in some situations, calling dired directly is necessary. For example, calling dired then give “~/emacs/*.html” to list all HTML files. If using “find-file”, it'll try to open all files.
 </p>
 <p>
 Now, since it's necessary to call “dired” directly sometimes, it's convenient to have a key. Since GNU Emacs already has 【C-x d】 for it, and this key doesn't conflict with ErgoEmacs, so we use it.
@@ -847,7 +847,7 @@ Thanks to Renier (renierm@gmail.com) for code. <a href="http://groups.google.com
 </div>
 
 <div id="outline-container-24-3" class="outline-4">
-<h4 id="sec-24-3"><kbd class="dark">2</kbd>010-11-18 added a hotkey 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+t】 for open-last-closed</h4>
+<h4 id="sec-24-3"><kbd class="dark">2</kbd>010-11-18 added a hotkey 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 for open-last-closed</h4>
 <div class="outline-text-4" id="text-24-3">
 
 <p>r556
@@ -875,7 +875,7 @@ Thanks to Max Arnold for bug report.
 </div>
 
 <div id="outline-container-25-1" class="outline-4">
-<h4 id="sec-25-1"><kbd class="dark">A</kbd>dded open-in-desktop command with key 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+o】.</h4>
+<h4 id="sec-25-1"><kbd class="dark">A</kbd>dded open-in-desktop command with key 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】.</h4>
 <div class="outline-text-4" id="text-25-1">
 
 </div>
@@ -914,10 +914,10 @@ See also: 〈Dvorak, Maltron, Colemak, NEO, Bépo, Turkish-F, Keyboard Layouts F
 </div>
 
 <div id="outline-container-25-4-1" class="outline-5">
-<h5 id="sec-25-4-1">【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">B</kbd>ackspace】 for backward-kill-word</h5>
+<h5 id="sec-25-4-1">【<Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK"></KBD>ackspace】 for backward-kill-word</h5>
 <div class="outline-text-5" id="text-25-4-1">
 
-<p>This is a standard key together with 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">A</kbd>rrow】 and 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">D</kbd>el】.
+<p>This is a standard key together with 【<Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK"></KBD>rrow】 and 【<Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK"></KBD>el】.
 </p>
 <p>
 r477 Technically, removed the unbinding of 「&lt;C-backspace&gt;」
@@ -959,10 +959,10 @@ r477 Technically, removed the unbinding of 「&lt;C-backspace&gt;」
 
 <p>
 OLD             COMMAND                       NEW
-【<kbd class="dark">Alt</kbd>+<kbd class="dark">1</kbd>】        delete-other-windows         【<kbd class="dark">Alt</kbd>+<kbd class="dark">3</kbd>】
-【<kbd class="dark">Alt</kbd>+<kbd class="dark">!</kbd>】        delete-window                【<kbd class="dark">Alt</kbd>+<kbd class="dark">0</kbd>】
-【<kbd class="dark">Alt</kbd>+<kbd class="dark">2</kbd>】        split-window-vertically      【<kbd class="dark">Alt</kbd>+<kbd class="dark">4</kbd>】
-【<kbd class="dark">Alt</kbd>+<kbd class="dark">@</kbd>】        split-window-horizontally    【<kbd class="dark">Alt</kbd>+<kbd class="dark">$</kbd>】
+【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】        delete-other-windows         【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
+【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】        delete-window                【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
+【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】        split-window-vertically      【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
+【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】        split-window-horizontally    【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
 </p>
 <p>
 Reason: the 1 and 2 keys are two of the most difficult to press keys on the top row.
@@ -984,7 +984,7 @@ therefore this change. For Xah Lee's personal experience in this, see:
  <a href="http://xahlee.org/emacs/vi_esc_syndrome.html">http://xahlee.org/emacs/vi_esc_syndrome.html</a>
 </p>
 <p>
-Note that 【<kbd class="dark">Alt</kbd>+<kbd class="dark">0</kbd>】 for delete-window was in the original ErgoEmacs keybinding design for about a year, but got changed to 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+1】 (【<kbd class="dark">Alt</kbd>+<kbd class="dark">!</kbd>】). The thinking was for some logical consistency with 【<kbd class="dark">Alt</kbd>+<kbd class="dark">1</kbd>】. My experience since is that logical consistency is bad for ergonomics advantage. Logical consistency is good at beginning for learning, but once muscle memory is developed, ergonomic efficiency is far more important, and will be used for years.
+Note that 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 for delete-window was in the original ErgoEmacs keybinding design for about a year, but got changed to 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 (【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】). The thinking was for some logical consistency with 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】. My experience since is that logical consistency is bad for ergonomics advantage. Logical consistency is good at beginning for learning, but once muscle memory is developed, ergonomic efficiency is far more important, and will be used for years.
 </p></div>
 </div>
 
@@ -998,12 +998,12 @@ Note that 【<kbd class="dark">Alt</kbd>+<kbd class="dark">0</kbd>】 for delete
 </div>
 
 <div id="outline-container-27-1" class="outline-4">
-<h4 id="sec-27-1">【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">p</kbd>】 now asks for confirmation before printing</h4>
+<h4 id="sec-27-1">【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 now asks for confirmation before printing</h4>
 <div class="outline-text-4" id="text-27-1">
 
-<p>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">p</kbd>】 will now ask user confirmation before printing the current buffer.
+<p>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 will now ask user confirmation before printing the current buffer.
 This is to prevent unintentional printing.
-Old Emacs users tends to press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">p</kbd>】 a lot because that used to be moving cursor up.
+Old Emacs users tends to press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 a lot because that used to be moving cursor up.
 See: <a href="http://code.google.com/p/ergoemacs/issues/detail?id=60">http://code.google.com/p/ergoemacs/issues/detail?id=60</a>
 </p></div>
 </div>
@@ -1090,7 +1090,7 @@ A Colemak layout is added or sometimes before. The bulk of key mapping was helpe
 <div class="outline-text-4" id="text-30-1">
 
 <p>By David Capello.
-This version is now a full featured minor mode. It supports 3 different keyboard layout: US QWERTY, US Dvorak, and “Spanish (Spain)” (aka “Spanish (International sort)”). Also supports a new command where-is-old-binding (with shortcut 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">h</kbd> o】).
+This version is now a full featured minor mode. It supports 3 different keyboard layout: US QWERTY, US Dvorak, and “Spanish (Spain)” (aka “Spanish (International sort)”). Also supports a new command where-is-old-binding (with shortcut 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> o】).
 </p></div>
 </div>
 
@@ -1152,7 +1152,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-34-1" class="outline-4">
-<h4 id="sec-34-1">【<kbd class="dark">Alt</kbd>+<kbd class="dark">p</kbd>】 is now “recenter-top-bottom” for emacs 23 users. In emacs 22, it is “recenter”.</h4>
+<h4 id="sec-34-1">【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 is now “recenter-top-bottom” for emacs 23 users. In emacs 22, it is “recenter”.</h4>
 <div class="outline-text-4" id="text-34-1">
 
 </div>
@@ -1208,7 +1208,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-37-1" class="outline-4">
-<h4 id="sec-37-1"><kbd class="dark">u</kbd>nbind 「C-x 3」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark">@</kbd>】 for split-window-horizontally)</h4>
+<h4 id="sec-37-1"><kbd class="dark">u</kbd>nbind 「C-x 3」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 for split-window-horizontally)</h4>
 <div class="outline-text-4" id="text-37-1">
 
 </div>
@@ -1216,7 +1216,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-37-2" class="outline-4">
-<h4 id="sec-37-2"><kbd class="dark">u</kbd>nbind 「C-M-%」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark">%</kbd>】 for query-replace-regexp).</h4>
+<h4 id="sec-37-2"><kbd class="dark">u</kbd>nbind 「C-M-%」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 for query-replace-regexp).</h4>
 <div class="outline-text-4" id="text-37-2">
 
 </div>
@@ -1224,7 +1224,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-37-3" class="outline-4">
-<h4 id="sec-37-3"><kbd class="dark">u</kbd>nbind 「C-@」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>pace】 for set-mark-command).</h4>
+<h4 id="sec-37-3"><kbd class="dark">u</kbd>nbind 「C-@」 (use 【<Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK"></KBD>pace】 for set-mark-command).</h4>
 <div class="outline-text-4" id="text-37-3">
 
 </div>
@@ -1232,7 +1232,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-37-4" class="outline-4">
-<h4 id="sec-37-4"><kbd class="dark">u</kbd>nbind 「M-{」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark">u</kbd>】 for backward-paragraph).</h4>
+<h4 id="sec-37-4"><kbd class="dark">u</kbd>nbind 「M-{」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 for backward-paragraph).</h4>
 <div class="outline-text-4" id="text-37-4">
 
 </div>
@@ -1240,7 +1240,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-37-5" class="outline-4">
-<h4 id="sec-37-5"><kbd class="dark">u</kbd>nbind 「M-}」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark">o</kbd>】 for forward-paragraph). Thanks to marciomazza</h4>
+<h4 id="sec-37-5"><kbd class="dark">u</kbd>nbind 「M-}」 (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 for forward-paragraph). Thanks to marciomazza</h4>
 <div class="outline-text-4" id="text-37-5">
 
 </div>
@@ -1256,7 +1256,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-38-1" class="outline-4">
-<h4 id="sec-38-1"><kbd class="dark">a</kbd>dded 【<kbd class="dark">Alt</kbd>+<kbd class="dark">7</kbd>】 to select-text-in-quote.</h4>
+<h4 id="sec-38-1"><kbd class="dark">a</kbd>dded 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 to select-text-in-quote.</h4>
 <div class="outline-text-4" id="text-38-1">
 
 </div>
@@ -1320,7 +1320,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-42-1" class="outline-4">
-<h4 id="sec-42-1"><kbd class="dark">A</kbd>dded 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+PageDown】 for forward-page (move cursor to the next ASCII formfeed char (often displayed as <sup>L</sup>)). Same for PageDown key.</h4>
+<h4 id="sec-42-1"><kbd class="dark">A</kbd>dded 【<Kbd Class="Dark">Alt</Kbd>+<Kbd Class="Dark">⇧ Shift</kbd>+<KBD CLASS="DARK"></KBD>ageDown】 for forward-page (move cursor to the next ASCII formfeed char (often displayed as <sup>L</sup>)). Same for PageDown key.</h4>
 <div class="outline-text-4" id="text-42-1">
 
 </div>
@@ -1336,7 +1336,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-43-1" class="outline-4">
-<h4 id="sec-43-1"><kbd class="dark">A</kbd>dded 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+n】 for opening a new window (make-frame-command). Removed 「C-x 5 2」. Added 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+w】 for closing window (delete-frame), removed 「C-x 5 0」.</h4>
+<h4 id="sec-43-1"><kbd class="dark">A</kbd>dded 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 for opening a new window (make-frame-command). Removed 「C-x 5 2」. Added 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 for closing window (delete-frame), removed 「C-x 5 0」.</h4>
 <div class="outline-text-4" id="text-43-1">
 
 </div>
@@ -1352,7 +1352,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-44-1" class="outline-4">
-<h4 id="sec-44-1"><kbd class="dark">R</kbd>emoved 「C-x o」 for other-window. (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark">s</kbd>】 and 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+s】 instead.)</h4>
+<h4 id="sec-44-1"><kbd class="dark">R</kbd>emoved 「C-x o」 for other-window. (use 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 and 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 instead.)</h4>
 <div class="outline-text-4" id="text-44-1">
 
 </div>
@@ -1384,7 +1384,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-46-1" class="outline-4">
-<h4 id="sec-46-1"><kbd class="dark">A</kbd>dded 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+x】 for cut-all and 【<kbd class="dark">Alt</kbd>+<kbd class="dark">S</kbd>hift+c】 for copy-all.</h4>
+<h4 id="sec-46-1"><kbd class="dark">A</kbd>dded 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 for cut-all and 【<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 for copy-all.</h4>
 <div class="outline-text-4" id="text-46-1">
 
 </div>
@@ -1400,7 +1400,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-47-1" class="outline-4">
-<h4 id="sec-47-1"><kbd class="dark">R</kbd>emoved 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">w</kbd>】 for write-file. Use 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+s】.</h4>
+<h4 id="sec-47-1"><kbd class="dark">R</kbd>emoved 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 for write-file. Use 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】.</h4>
 <div class="outline-text-4" id="text-47-1">
 
 </div>
@@ -1408,7 +1408,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-47-2" class="outline-4">
-<h4 id="sec-47-2"><kbd class="dark">F</kbd>ixed 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">o</kbd>】 for ibuffer to run find-file instead of ibuffer-visit-buffer-other-window-noselect.</h4>
+<h4 id="sec-47-2"><kbd class="dark">F</kbd>ixed 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 for ibuffer to run find-file instead of ibuffer-visit-buffer-other-window-noselect.</h4>
 <div class="outline-text-4" id="text-47-2">
 
 </div>
@@ -1424,7 +1424,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-48-1" class="outline-4">
-<h4 id="sec-48-1"><kbd class="dark">f</kbd>ixed a dired binding so that 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">o</kbd>】 runs find-file instead of dired-display-file</h4>
+<h4 id="sec-48-1"><kbd class="dark">f</kbd>ixed a dired binding so that 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 runs find-file instead of dired-display-file</h4>
 <div class="outline-text-4" id="text-48-1">
 
 </div>
@@ -1440,7 +1440,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-49-1" class="outline-4">
-<h4 id="sec-49-1"><kbd class="dark">R</kbd>emoved the default keybinding for split-window-vertically 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> 2】. Use 【<kbd class="dark">Alt</kbd>+<kbd class="dark">2</kbd>】 instead.</h4>
+<h4 id="sec-49-1"><kbd class="dark">R</kbd>emoved the default keybinding for split-window-vertically 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> 2】. Use 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 instead.</h4>
 <div class="outline-text-4" id="text-49-1">
 
 </div>
@@ -1448,7 +1448,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-49-2" class="outline-4">
-<h4 id="sec-49-2"><kbd class="dark">T</kbd>he key 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd>】 is now ibuffer, instead of list-buffers.</h4>
+<h4 id="sec-49-2"><kbd class="dark">T</kbd>he key 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 is now ibuffer, instead of list-buffers.</h4>
 <div class="outline-text-4" id="text-49-2">
 
 </div>
@@ -1456,7 +1456,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-49-3" class="outline-4">
-<h4 id="sec-49-3">【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">h</kbd> m】 now calls describe-major-mode.</h4>
+<h4 id="sec-49-3">【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> m】 now calls describe-major-mode.</h4>
 <div class="outline-text-4" id="text-49-3">
 
 </div>
@@ -1468,7 +1468,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 <h3 id="sec-50"><kbd class="dark">v</kbd>ersion 4.2.1, 2009-02-28</h3>
 <div class="outline-text-3" id="text-50">
 
-<p>Changed the keybinding for previous-user-buffer from 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">←</kbd>】 to 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">P</kbd>ageUp】. And previous-emacs-buffer from 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+←】 to 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">S</kbd>hift+PageUp】. Similar for the “next” versions. Rationale: The 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">A</kbd>rrow】 are standard editing shortcuts command in Windows, Mac, Linux.
+<p>Changed the keybinding for previous-user-buffer from 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 to 【<Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK"></KBD>ageUp】. And previous-emacs-buffer from 【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 to 【<Kbd Class="Dark">Ctrl</Kbd>+<Kbd Class="Dark">⇧ Shift</kbd>+<KBD CLASS="DARK"></KBD>ageUp】. Similar for the “next” versions. Rationale: The 【<Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK"></KBD>rrow】 are standard editing shortcuts command in Windows, Mac, Linux.
 </p></div>
 
 </div>
@@ -1477,7 +1477,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 <h3 id="sec-51"><kbd class="dark">v</kbd>ersion 4.2.0, 2009-02-27</h3>
 <div class="outline-text-3" id="text-51">
 
-<p>Added 【<kbd class="dark">Alt</kbd>+<kbd class="dark">t</kbd>】 for keyword completion. Rationale: The default 「M-TAB」 is used by Windows, Mac, Linux, to switch apps.
+<p>Added 【<kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 for keyword completion. Rationale: The default 「M-TAB」 is used by Windows, Mac, Linux, to switch apps.
 </p></div>
 
 </div>
@@ -1582,7 +1582,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-58-1" class="outline-4">
-<h4 id="sec-58-1"><kbd class="dark">R</kbd>emoved 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> h】  for mark-whole-buffer. (use 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">a</kbd>】 instead)</h4>
+<h4 id="sec-58-1"><kbd class="dark">R</kbd>emoved 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> h】  for mark-whole-buffer. (use 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 instead)</h4>
 <div class="outline-text-4" id="text-58-1">
 
 </div>
@@ -1664,7 +1664,7 @@ This version is now a full featured minor mode. It supports 3 different keyboard
 </div>
 
 <div id="outline-container-62-1" class="outline-4">
-<h4 id="sec-62-1"><kbd class="dark">U</kbd>nbind almost all 【Meta+‹key›】 and 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">‹</kbd>key›】 space bindings.</h4>
+<h4 id="sec-62-1"><kbd class="dark">U</kbd>nbind almost all 【Meta+‹key›】 and 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>key›】 space bindings.</h4>
 <div class="outline-text-4" id="text-62-1">
 
 </div>

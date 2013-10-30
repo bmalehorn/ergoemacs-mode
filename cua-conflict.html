@@ -119,40 +119,40 @@
 <div class="outline-text-3" id="text-1">
 
 <p>There is a conflict between standard shortcuts and emacs shortcuts.
-In most applications <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> is copy and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> is cut.  In emacs
-<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> generally refer to global commands, while <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> refers to
+In most applications <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> is copy and <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> is cut.  In emacs
+<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> generally refer to global commands, while <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> refers to
 language specific commands. 
 </p>
 <p>
-Ergoemacs provides a few options to work with the <kbd class="dark">Ctl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctl</kbd>+<kbd class="dark">x</kbd> keys.
+Ergoemacs provides a few options to work with the <kbd class="dark">Ctl</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Ctl</kbd>+<kbd class="dark"></kbd> keys.
 </p>
 
 </div>
 
 <div id="outline-container-1-1" class="outline-4">
-<h4 id="sec-1-1"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to both copy and cut and emacs keys</h4>
+<h4 id="sec-1-1"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> to both copy and cut and emacs keys</h4>
 <div class="outline-text-4" id="text-1-1">
 
-<p>Like <code>cua-mode</code>, <code>ergoemacs-mode</code> allows <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to be
+<p>Like <code>cua-mode</code>, <code>ergoemacs-mode</code> allows <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> to be
 bound to both copy/cut, and the emacs key sequences.
 </p>
 <p>
-The default method will copy text when selected with <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and cut
-text when selected with <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>.  This is fine, but if you wish to
+The default method will copy text when selected with <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> and cut
+text when selected with <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>.  This is fine, but if you wish to
 perform an emacs command on selected region, this could be problematic
 as discussed in Xah's <a href="http://ergoemacs.org/misc/emacs_keybinding_and_cua-mode_keys.html">blog</a>.  (For example python shift indent is bound
-to 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> &lt;】) 
+to 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> &lt;】) 
 </p>
 <p>
 When you wish to do issue emacs commands on a region you can:
 </p><ul>
-<li>Add a shift to the first <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>.
+<li>Add a shift to the first <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>.
 <ul>
-<li>For example press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">c</kbd> &lt;】 for python's shift indent
+<li>For example press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd> &lt;】 for python's shift indent
     command
 </li>
 <li>This will not work in a terminal (most terminals cannot tell the
-    difference between 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">c</kbd>】 and 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>】)
+    difference between 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 and 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】)
 </li>
 </ul>
 
@@ -185,11 +185,11 @@ you could use the following in your emacs startup file:
 </div>
 
 <div id="outline-container-1-2" class="outline-4">
-<h4 id="sec-1-2"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to emacs commands only</h4>
+<h4 id="sec-1-2"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> to emacs commands only</h4>
 <div class="outline-text-4" id="text-1-2">
 
-<p>Another option is to ditch copy and paste with <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>, even
-though they are standard keys.  Instead you can use <kbd class="dark">Alt</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Alt</kbd>+<kbd class="dark">x</kbd> to
+<p>Another option is to ditch copy and paste with <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>, even
+though they are standard keys.  Instead you can use <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd> to
 do copy and paste.
 </p>
 <p>
@@ -212,10 +212,10 @@ different applications.
 </div>
 
 <div id="outline-container-1-3" class="outline-4">
-<h4 id="sec-1-3"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to only copy and cut</h4>
+<h4 id="sec-1-3"><kbd class="dark">B</kbd>inding <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> to only copy and cut</h4>
 <div class="outline-text-4" id="text-1-3">
 
-<p>If you wanted <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> to only be copy and cut, you add
+<p>If you wanted <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> to only be copy and cut, you add
 the ability to copy/cut the current line when nothing is selected.
 This can be done by:
 </p>
@@ -228,25 +228,25 @@ This can be done by:
 <p>
 The possible disadvantage to this is you would have to use another key
 to access the defined emacs commands.  Currently ergoemacs-mode allows
-you to use QWERTY 【▤ Menu d】 or 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">x</kbd>】 to access emacs
-<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> commands and QWERTY 【▤ Menu f】 or 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">c</kbd>】 to
-access <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> commands.
+you to use QWERTY 【▤ Menu d】 or 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 to access emacs
+<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> commands and QWERTY 【▤ Menu f】 or 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark"></kbd>】 to
+access <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> commands.
 </p>
 <p>
-The 【▤ Menu】 keybindings are slightly different than plan <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> or
-<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>:
+The 【▤ Menu】 keybindings are slightly different than plan <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> or
+<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>:
 </p><ul>
-<li>For <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>, the Alt and Ctrl keys are swapped.  Hence for the
-  equivalent of 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd>】, you would press 【▤ Menu s <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd>】
+<li>For <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>, the Alt and Ctrl keys are swapped.  Hence for the
+  equivalent of 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】, you would press 【▤ Menu s <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
 </li>
-<li>For <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>, control keys are mapped to plain keys. Plain keys
+<li>For <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>, control keys are mapped to plain keys. Plain keys
   are mapped to Alt keys. Alt keys are mapped to Ctl keys.  Hence:
 <ul>
-<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>】 would be 【▤ Menu f c】
+<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd>】 would be 【▤ Menu f c】
 </li>
-<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> c】 would be 【▤ Menu f <kbd class="dark">Alt</kbd>+<kbd class="dark">c</kbd>】
+<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> c】 would be 【▤ Menu f <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】
 </li>
-<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> <kbd class="dark">Alt</kbd>+<kbd class="dark">c</kbd>】 would be 【▤ Menu f <kbd class="dark">Ctl</kbd>+<kbd class="dark">c</kbd>】
+<li>【<kbd class="dark">Ctrl</kbd>+<kbd class="dark"></kbd> <kbd class="dark">Alt</kbd>+<kbd class="dark"></kbd>】 would be 【▤ Menu f <kbd class="dark">Ctl</kbd>+<kbd class="dark"></kbd>】
 </li>
 <li>This is called unchorded mapping
 </li>
