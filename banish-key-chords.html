@@ -127,7 +127,7 @@ replace ergoemacs keys.  The background is given in the following pages
 
 
 <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1"><kbd class="dark">C</kbd>hanging C-x and C-c</h3>
+<h3 id="sec-1"><kbd class="dark">C</kbd>hanging <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd></h3>
 <div class="outline-text-3" id="text-1">
 
 <p>For emacs, the most common key sequences start with C-x or C-c. This
@@ -138,18 +138,18 @@ commands (see <a href="standard-shortcuts.html">standard shortcuts</a>).
 <p>
 I've thought about how to take out the use of the
 control key and reduce the key chord reduction. This is how
-I came up with the C-c and C-x replacements:
+I came up with the <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> replacements:
 </p>
 <ul>
-<li>C-x commands can be accessed by QWERTY 
+<li>Ctrl-x commands can be accessed by QWERTY 
   <kbd class="dark">Menu</kbd>  <kbd class="dark">d</kbd>
 <ul>
-<li>This is <b>not</b> the same as the traditional C-x. Heres how its
+<li>This is <b>not</b> the same as the traditional <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>. Heres how its
     different:
 <ul>
 <li>By default all <kbd class="dark">Ctrl</kbd> commands are translated to <kbd class="dark">Alt</kbd> commands.
 <ul>
-<li>C-x C-b could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd> (list-buffers)
+<li><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd> could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd> (list-buffers)
 </li>
 <li>C-x b could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">b</kbd> (switch-to-buffer)
 </li>
@@ -157,12 +157,12 @@ I came up with the C-c and C-x replacements:
 
 </li>
 <li>Pressing <kbd class="dark">Menu</kbd> will
-      change the type of key translation used.  The default for C-x is
+      change the type of key translation used.  The default for <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> is
       translate/swap the Alt and Ctl keys.  Pressing Menu again will:
 <ul>
 <li>Make the keyboard translation for C-x "unchorded"
 </li>
-<li>The pressing Menu would remove the keyboard translation for C-x.
+<li>The pressing Menu would remove the keyboard translation for <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>.
 </li>
 <li>Finally pressing Menu again would result the translation/swap
         of Ctrl and Alt (as at the beginning).
@@ -182,24 +182,24 @@ I came up with the C-c and C-x replacements:
 <p>
 For your information, an "unchorded" filter/translation would translate:
 </p><ul>
-<li>Ctrl key combinations to standard keys.  For example C-b would be
+<li>Ctrl key combinations to standard keys.  For example <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd> would be
   just b.
 </li>
-<li>Standard keys like b would be translated to M-b.
+<li>Standard keys like b would be translated to <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd>.
 </li>
 <li>Alt key combinations would be translated to Ctrl key combinations.
-  Therefore M-b would be translated to C-b.
+  Therefore <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd> would be translated to <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd>.
 
 </li>
 <li>C-c commands can be accessed by QWERTY 
   <kbd class="dark">Menu</kbd>  <kbd class="dark">f</kbd>
 <ul>
-<li>This is <b>not</b> the same as the traditional C-c. Heres how its
+<li>This is <b>not</b> the same as the traditional <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>. Heres how its
     different:
 <ul>
 <li>By default the "unchorded" filter is on.  This is because by <a href="http://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html">convention</a>,
-      major modes bind control keys like C-c C-r and leave keys like
-      C-c r to be bound by the user.  This means that you would put
+      major modes bind control keys like <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">r</kbd> and leave keys like
+      <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> r to be bound by the user.  This means that you would put
       less strain on your hand to have these key combinations to be
       unchorded by default.
 </li>
@@ -215,7 +215,7 @@ For your information, an "unchorded" filter/translation would translate:
 </li>
 <li>Second Menu press removes the filter
 </li>
-<li>Press Menu again to go back to the unchorded keyboard filter.
+<li>Press Menu again to go back to the unchorded keyboard filter.*
 </li>
 </ul>
 
@@ -225,84 +225,6 @@ For your information, an "unchorded" filter/translation would translate:
 </li>
 </ul>
 
-
-</div>
-
-</div>
-
-<div id="outline-container-2" class="outline-3">
-<h3 id="sec-2"><kbd class="dark">E</kbd>rgoemacs Key Chord Reduction</h3>
-<div class="outline-text-3" id="text-2">
-
-
-</div>
-
-<div id="outline-container-2-1" class="outline-4">
-<h4 id="sec-2-1"><kbd class="dark">M</kbd>ovement without key-chords</h4>
-<div class="outline-text-4" id="text-2-1">
-
-
-</div>
-
-<div id="outline-container-2-1-1" class="outline-5">
-<h5 id="sec-2-1-1">Method #1 &ndash; &lt;menu&gt; Movement mode</h5>
-<div class="outline-text-5" id="text-2-1-1">
-
-<p>One can enable movement without key-chords as follows:
-</p><ul>
-<li>On QWERTY, press [Menu] [k] and then the movement key.  This key is
-  repeatable.  Therefore [Menu] [k] [k] [k] would move the cursor down
-  two lines.  If this is followed by [i] this would have the cursor
-  move up a line.  To exit the repeatable movement/delete keys press
-  [Menu].  This is similar to VIM's edit mode, with a toggle of the
-  [Menu] key.
-<ul>
-<li>Shifted keys still are allowed.  For example, page up can be
-    accomplished in QWERTY by [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">i</kbd>].
-</li>
-<li>Any command that enters the minibuffer also exits the repeatable
-    movement/deletion.
-</li>
-<li>Any undefined key in the keymap (like 1) would exit the mode and
-    insert the character
-</li>
-</ul>
-
-</li>
-<li>To reduce the shifted key-chords, on QWERTY you can also press
-  [Menu] [i].  Therefore [Menu] [i] [i] is equivalent to one page
-  up. Followed by a [k] will be the page-down equivalent
-<ul>
-<li>Again, [Menu] stops the movement mode and anything that enters
-    the minibuffer removes the movement mode.
-</li>
-<li>Any undefined key in the keymap (like 1) would exit the mode and
-    insert the character
-</li>
-<li>Shift and the key is the unshifted command.  Therefore [Menu] [i]
-    [i] [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">k</kbd>] would be Page Up followed by down one character.
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-2-1-2" class="outline-5">
-<h5 id="sec-2-1-2">Method #2 &ndash; Modal Ergoemacs-mode</h5>
-<div class="outline-text-5" id="text-2-1-2">
-
-<p>You can press [F6] to get all the [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> commands bound letters
-themselves.  For example [<kbd class="dark">Alt</kbd>+<kbd class="dark">k</kbd>] is bound to [k].  [<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">]</kbd> keys
-are bound to [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">]</kbd> or [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> keys.  Hence, [<Kbd Class="Dark">⇧ Shift</kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark">m</kbd>] is bound
-to both [<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">m</kbd>] and  [<kbd class="dark">Alt</kbd>+<kbd class="dark">m</kbd>].  To exit ergoemacs modal mode, you
-can press [Return] or [F6].  
-</p></div>
-</div>
 </div>
 </div>
 
