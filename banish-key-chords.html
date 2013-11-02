@@ -115,86 +115,117 @@
 <article>
   <div class="article-content">
     <p>
-For a background why it would be good to banish key chords, see <a href="http://xahlee.info/kbd/banish_key_chords.html">this page</a>.
-</p>
+This is an experimental ergoemacs feature to banish key chord and
+replace ergoemacs keys.  The background is given in the following pages
+</p><ul>
+<li>Why it would be good to <a href="http://xahlee.info/kbd/banish_key_chords.html">banish key chords</a>.
+</li>
+<li>Xah's quest to <a href="http://ergoemacs.org/emacs/emacs_keybinding_redesign_2.html">totally redesign the keys</a>.
+</li>
+</ul>
+
+
+
 <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1"><kbd class="dark">K</kbd>eyboard Shortcut Design</h3>
+<h3 id="sec-1"><kbd class="dark">C</kbd>hanging C-x and C-c</h3>
 <div class="outline-text-3" id="text-1">
 
-<p>This section discuss one criterion on the design of keyboard shortcut
-system: Repeatable vs Non-Repeatable Commands and Keys. This
-applicable in designing keybinding for emacs, vi, 3D modeling app, or
-any app that has hundreds commands that needs to map to keys.
+<p>For emacs, the most common key sequences start with C-x or C-c. This
+usually requires the use of the control key, and leads to the dreaded
+<a href="http://ergoemacs.org/emacs/emacs_pinky.html">emacs pinky</a>.  It also conflicts with the standard Cut and Copy
+commands (see <a href="standard-shortcuts.html">standard shortcuts</a>).
 </p>
-</div>
-
-<div id="outline-container-1-1" class="outline-4">
-<h4 id="sec-1-1"><kbd class="dark">R</kbd>epeatable and Non-Repeatable Commands</h4>
-<div class="outline-text-4" id="text-1-1">
-
-<p>In my keyboarding research, there's an important discovery. Commands
-can be classified into 2 types:
-</p><ol>
-<li>Repeatable commands. Commands that make sense to be repeated within
-   a second. i.e. moving cursor by char, word, page. Page up/down. Delete
-   by char, word. Expand selection, prev/next tab. You can hold down a
-   key or a key-chord to repeat the command many times. 
+<p>
+I've thought about how to take out the use of the
+control key and reduce the key chord reduction. This is how
+I came up with the C-c and C-x replacements:
+</p>
+<ul>
+<li>C-x commands can be accessed by QWERTY 
+  <kbd class="dark">Menu</kbd>  <kbd class="dark">d</kbd>
+<ul>
+<li>This is <b>not</b> the same as the traditional C-x. Heres how its
+    different:
+<ul>
+<li>By default all <kbd class="dark">Ctrl</kbd> commands are translated to <kbd class="dark">Alt</kbd> commands.
+<ul>
+<li>C-x C-b could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd> (list-buffers)
+</li>
+<li>C-x b could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">b</kbd> (switch-to-buffer)
+</li>
+</ul>
 
 </li>
-<li>Non-repeat commands. This is vast majority. i.e. starting
-   find/replace, open file, close file, list buffers, call a shell
-   command or start shell, describe-function, keyword expansion or
-   completion, list-matching-lines, sort-lines, kill-buffer,
-   switch-to-buffer, &hellip;
+<li>Pressing <kbd class="dark">Menu</kbd> will
+      change the type of key translation used.  The default for C-x is
+      translate/swap the Alt and Ctl keys.  Pressing Menu again will:
+<ul>
+<li>Make the keyboard translation for C-x "unchorded"
 </li>
-</ol>
+<li>The pressing Menu would remove the keyboard translation for C-x.
+</li>
+<li>Finally pressing Menu again would result the translation/swap
+        of Ctrl and Alt (as at the beginning).
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
 
 
-</div>
-
-</div>
-
-<div id="outline-container-1-2" class="outline-4">
-<h4 id="sec-1-2"><kbd class="dark">R</kbd>epeatable and Non-Repeatable Keys</h4>
-<div class="outline-text-4" id="text-1-2">
-
-<p>The Repeatable Commands must have keys that can be held down. Here's
-example of repeatable hotkeys: F8, t, ⇟ Page ▽, ↓, 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">t</kbd>】,
-【<Kbd Class="Dark">Ctrl</Kbd>+<kbd class="dark">Alt</kbd>+<kbd class="dark">8</kbd>】, ….
-</p>
 <p>
-Non-repeatable hotkeys are basically keys that involves a sequence:
-【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> 2】, 【F8 F9】
-</p>
-<p>
-So, when designing a shortcut system, one of the principle is for
-repeatable commands be on repeatable keys, else it's a waste. (because
-you only have a few precious easy key spots, yet you have one hundred
-commands in common use.)
-</p>
-<p>
-In GNU Emacs's default keybinding, there are many such wastes. For
-example, all 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">‹</kbd>number›】 and 【<kbd class="dark">Alt</kbd>+<kbd class="dark">‹</kbd>number›】 are bound to
-digit-argument. The digit-argument is a non-repeat command, yet it
-sits on 20 EASY repeatable keys. (but most damaging is that
-digit-argument isn't a frequently needed command, with respect to all
-commands and the relatively few easy-key-spots.)
-</p>
-<p>
-Another bad example is forward-page 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> ]】. forward-page is a
-repeatable command, but it doesn't have a repeating key. Imagine, if
-every time you need to ⇟ Page ▽ that you have to press 【<kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>】
-first. You couldn't just hold it down.
-</p>
-<p>
-But remember, this “Repeatable and Non-Repeatable key” is only a
-supporting criterion in keybinding design. It is not the most
-important criterion. The single most important criterion in designing
-a keyboard shortcut system is that most frequently used commands be
-mapped to the most easy-to-press keys. 
-</p>
+For your information, an "unchorded" filter/translation would translate:
+</p><ul>
+<li>Ctrl key combinations to standard keys.  For example C-b would be
+  just b.
+</li>
+<li>Standard keys like b would be translated to M-b.
+</li>
+<li>Alt key combinations would be translated to Ctrl key combinations.
+  Therefore M-b would be translated to C-b.
 
-</div>
+</li>
+<li>C-c commands can be accessed by QWERTY 
+  <kbd class="dark">Menu</kbd>  <kbd class="dark">f</kbd>
+<ul>
+<li>This is <b>not</b> the same as the traditional C-c. Heres how its
+    different:
+<ul>
+<li>By default the "unchorded" filter is on.  This is because by <a href="http://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html">convention</a>,
+      major modes bind control keys like C-c C-r and leave keys like
+      C-c r to be bound by the user.  This means that you would put
+      less strain on your hand to have these key combinations to be
+      unchorded by default.
+</li>
+<li><kbd class="dark">Ctrl</kbd> commands are translated to <kbd class="dark">Alt</kbd> commands.
+</li>
+</ul>
+
+</li>
+<li>Like C-x, pressing Menu changes the filter
+<ul>
+<li>First Menu press changes the unchorded filter to the ctl &lt;-&gt;
+      alt filter
+</li>
+<li>Second Menu press removes the filter
+</li>
+<li>Press Menu again to go back to the unchorded keyboard filter.
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+
 </div>
 
 </div>
@@ -207,91 +238,15 @@ mapped to the most easy-to-press keys.
 </div>
 
 <div id="outline-container-2-1" class="outline-4">
-<h4 id="sec-2-1">[Control+x] and [Control-c] reduction</h4>
+<h4 id="sec-2-1"><kbd class="dark">M</kbd>ovement without key-chords</h4>
 <div class="outline-text-4" id="text-2-1">
 
-<p>For emacs, the most common prefixes are [Control-x] or [Control-c].
-</p>
-<p>
-For QWERTY, an additional mapping of these keys have been made:
-</p><ul>
-<li>A modified Control-x map has been assigned to Menu f:
-<ul>
-<li>This map allows you to type the keys without a key chord
-    requirement.  For example to switch buffers instead of
-    [Control+x] [b] you could type [Menu] [d] [b].  (Note that the [d]
-    key changes based on layout; For example using the colemak layout
-    you would type [Menu] [t] [b] to switch buffers).
-
-</li>
-<li>This modified keymap changes the control-chorded keys to
-    alt-chorded keys since they are easier to reach, there is another
-    keymap that removes the control-chorded keys.  Therefore to get
-    the buffer list, instead of having to type [Control-x]
-    [Control-b] you can type [Menu] [d] [Alt-b].
-
-</li>
-<li>The [Alt-] keychords in this modified keymap are changed to
-    [Control-] keys.  For example, <code>repeat-complex-command</code> is mapped
-    from [Control-x] [<kbd class="dark">Alt</kbd>+<kbd class="dark">:</kbd>] to [Menu] [d] [Control-:].  As far as I
-    can tell this is the only [Control-x] [Alt] combination. 
-
-</li>
-</ul>
-
-</li>
-<li>A modified unchorded Control-x map has assigned to QWERTY [Menu]
-  [f].  This map has changed the Control-x map as follows:
-
-<ul>
-<li>Chorded control keys are subset.  Therefore only keys that have
-    the combination [Control-x] [Control-] are used.
-
-</li>
-<li>Chorded key combinations are changed drop the chord.  For example
-    the buffer list [Control-x] [Conrtol-b] is changed to [Menu] [f]
-    [b].
-
-</li>
-<li>Chorded key combinations that are single key are translated to
-    [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> for example [Control+k] [a] is changed to [Menu] [f] [k]
-    [<kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>]
-
-</li>
-<li>Chorded key combinations that work with [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> are translated to
-    [Control+].  For example [Control+k] [<kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>] is changed to [Menu]
-    [f] [k] [Control+a].  I don't think there are currently any keys
-    bound to these types of key combinations.  They are quite
-    difficult to press and remember.
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-<p>
-Similarly The Control-c keymap is rebound to [Menu] [j] for the
-modified [Control-c] keymap and [Menu] [u] for the unchorded
-[Control-c] keymap.  This is also true of the [Control-h] keymap.
-This is bound to [Menu] [h] for the normal Control-h keymap.  It is
-also bound to [Menu] [y] for the unchorded Control-h keymap.
-</p>
 
 </div>
 
-</div>
-
-<div id="outline-container-2-2" class="outline-4">
-<h4 id="sec-2-2"><kbd class="dark">M</kbd>ovement without key-chords</h4>
-<div class="outline-text-4" id="text-2-2">
-
-
-</div>
-
-<div id="outline-container-2-2-1" class="outline-5">
-<h5 id="sec-2-2-1">Method #1 &ndash; &lt;menu&gt; Movement mode</h5>
-<div class="outline-text-5" id="text-2-2-1">
+<div id="outline-container-2-1-1" class="outline-5">
+<h5 id="sec-2-1-1">Method #1 &ndash; &lt;menu&gt; Movement mode</h5>
+<div class="outline-text-5" id="text-2-1-1">
 
 <p>One can enable movement without key-chords as follows:
 </p><ul>
@@ -337,9 +292,9 @@ also bound to [Menu] [y] for the unchorded Control-h keymap.
 
 </div>
 
-<div id="outline-container-2-2-2" class="outline-5">
-<h5 id="sec-2-2-2">Method #2 &ndash; Modal Ergoemacs-mode</h5>
-<div class="outline-text-5" id="text-2-2-2">
+<div id="outline-container-2-1-2" class="outline-5">
+<h5 id="sec-2-1-2">Method #2 &ndash; Modal Ergoemacs-mode</h5>
+<div class="outline-text-5" id="text-2-1-2">
 
 <p>You can press [F6] to get all the [<kbd class="dark">Alt</kbd>+<kbd class="dark">]</kbd> commands bound letters
 themselves.  For example [<kbd class="dark">Alt</kbd>+<kbd class="dark">k</kbd>] is bound to [k].  [<Kbd Class="Dark">Alt</Kbd>+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">]</kbd> keys
