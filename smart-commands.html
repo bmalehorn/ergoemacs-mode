@@ -462,6 +462,64 @@ enable this by:
 <div class="outline-text-3" id="text-5">
 
 </div>
+
+</div>
+
+<div id="outline-container-6" class="outline-3">
+<h3 id="sec-6"><kbd class="dark">S</kbd>mart Capitalization</h3>
+<div class="outline-text-3" id="text-6">
+
+<p>This command is an extension of the <a href="http://ergoemacs.org/emacs/modernization_upcase-word.html">smart Letter-Case command</a>. It
+also toggles camelCase words when it detects you are in a variable.
+When you are outside of a word, it corrects the last mis-spelled
+word. 
+</p>
+<p>
+The camel-case is determined by the major-mode's mode's settings in
+<code>ergoemacs-toggle-camel-case-chars</code>.  In emacs-lisp it is more common
+to separate variables with <code>-</code> rather than <code>_</code>.  The default setting
+for <code>emacs-lisp-mode</code> allows toggling between the various variables.
+For exampleVariable emacs-lisp toggles between the following:
+</p>
+<ul>
+<li>exampleVariable
+</li>
+<li>ExampleVariable
+</li>
+<li>example-variable
+</li>
+<li>example<sub>variable</sub>
+</li>
+</ul>
+
+
+<p>
+In <code>R</code> it is likely that you separate variables by <code>.</code> or <code>_</code>  so
+exampleVariable would be toggled between
+</p>
+<ul>
+<li>exampleVariable
+</li>
+<li>ExampleVariable
+</li>
+<li>example.variable
+</li>
+<li>example<sub>variable</sub>
+</li>
+</ul>
+
+
+<p>
+In some modes, like <code>org-mode</code> only the toggle letter case is
+active.  
+</p>
+<p>
+Any of these can be customized by customizing the variable
+<code>ergoemacs-toggle-camel-case-chars</code>. 
+</p>
+
+
+</div>
 </div>
 
   </div>
