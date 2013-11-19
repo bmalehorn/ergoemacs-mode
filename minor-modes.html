@@ -323,8 +323,36 @@ are lost, but can be recovered using [C-z].
 </div>
 
 <div id="outline-container-3" class="outline-3">
-<h3 id="sec-3"><kbd class="dark">V</kbd>isual Regexp</h3>
+<h3 id="sec-3"><kbd class="dark">H</kbd>elm-mode</h3>
 <div class="outline-text-3" id="text-3">
+
+<p>Helm mode's actions are in general executed with the Return key. The
+persistent actions can be executed with <Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK">R</KBD>eturn.  The prefix-based
+persistent actions can be execute with <Kbd Class="Dark">Alt</Kbd>+<Kbd Class="Dark">⇧ Shift</kbd>+<KBD CLASS="DARK">R</KBD>eturn.  
+</p>
+<p>
+The exception to this is when finding files.  Return will expand the
+directory within helm (equivalent to helm's execute persistent action
+for a directory). And <Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK">R</KBD>eturn will open dired.  This is equivalent
+to ido-mode.  In my opinion it is more likely that you want to do
+than to open in ido-mode. Therefore an unchorded key is more
+ergonomic than a key combination like <Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK">R</KBD>eturn.  However, you can
+turn off this behavior by changing the following setting:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-helm-ido-style-return nil)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4"><kbd class="dark">V</kbd>isual Regexp</h3>
+<div class="outline-text-3" id="text-4">
 
 <p>When <a href="https://github.com/benma/visual-regexp.el">visual regexp</a> is installed, ergoemacs-mode changes
 <code>query-replace-regexp</code> to <code>vr/query-replace</code>
@@ -332,9 +360,9 @@ are lost, but can be recovered using [C-z].
 
 </div>
 
-<div id="outline-container-4" class="outline-3">
-<h3 id="sec-4"><kbd class="dark">B</kbd>rowse-kill-ring and pasting</h3>
-<div class="outline-text-3" id="text-4">
+<div id="outline-container-5" class="outline-3">
+<h3 id="sec-5"><kbd class="dark">B</kbd>rowse-kill-ring and pasting</h3>
+<div class="outline-text-3" id="text-5">
 
 <p>The package <code>browse-kill-ring</code> can be integrated into the way that
 ergoemacs-mode pastes.  For information see
@@ -343,9 +371,9 @@ ergoemacs-mode pastes.  For information see
 
 </div>
 
-<div id="outline-container-5" class="outline-3">
-<h3 id="sec-5"><kbd class="dark">H</kbd>ighlight Symbol and searching</h3>
-<div class="outline-text-3" id="text-5">
+<div id="outline-container-6" class="outline-3">
+<h3 id="sec-6"><kbd class="dark">H</kbd>ighlight Symbol and searching</h3>
+<div class="outline-text-3" id="text-6">
 
 </div>
 </div>
