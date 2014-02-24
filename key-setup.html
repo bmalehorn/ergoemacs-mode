@@ -130,7 +130,61 @@
 </pre>
 
 
-Lisp error in nil: (wrong-type-argument arrayp nil)
+<script type="text/javascript">
+function change_layout() {
+  var select = document.getElementById('select_layout');
+  var selection = select.selectedIndex;
+  var img = select.options[selection].value;
+  select = document.getElementById('select_theme');
+  selection = select.selectedIndex;
+  var dir = select.options[selection].value;  
+  document.getElementById('ergo_image').src = "ergoemacs-extras/" + dir + "/ergoemacs-layout-" + img + ".png";
+  if (dir == "kbd-layouts"){
+    dir = "ergo-layouts";
+  } else {
+    var dir2 = dir;
+    if (dir2 == "ergo-layouts"){
+       dir2 = "nil";
+    } else {
+       dir2 = '<span style="font-style: italic;">"'+dir2+'"</span>';
+    }
+    document.getElementById('dot_emacs').innerHTML = '(setq ergoemacs-theme '+dir2+')\n(setq ergoemacs-keyboard-layout <span style="font-style: italic;">"' + img + '"</span>)\n(require \'ergoemacs-mode)\n(ergoemacs-mode 1)';
+    }
+  document.getElementByTagName('ergo_kbd').src = "ergoemacs-extras/" + dir + "/ergoemacs-layout-" + img + ".html";
+}
+    </script><form><strong>Layout:</strong><select onchange="change_layout()" id="select_layout">
+<option value="asset">US Asset layout.  URL `http://millikeys.sourceforge.net/asset/'.(asset)</option>
+<option value="bepo">French BÉPO layout.  URL `http://bepo.fr/'.(bepo)</option>
+<option value="colemak">US Colemak layout URL `http://colemak.com/'.(colemak)</option>
+<option value="da">Danish layout.(da)</option>
+<option value="de">German QWERTZ layout.(de)</option>
+<option value="de-truly-andw">German BU-TECK Layout. URL `http://www.adnw.de'. (de-truly-andw)</option>
+<option value="dv">US Dvorak layout.  URL `http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard'.(dv)</option>
+<option value="es">Spanish layout.  URL `http://en.wikipedia.org/wiki/Keyboard_layout'.(es)</option>
+<option value="fa">FA Persian standard layout.(fa)</option>
+<option value="fr">French AZERTY layout.  URL `http://en.wikipedia.org/wiki/Keyboard_layout'.(fr)</option>
+<option value="gb">UK layout.  URL `http://en.wikipedia.org/wiki/Keyboard_layout'.(gb)</option>
+<option value="gb-dv">UK Dvorak layout.(gb-dv)</option>
+<option value="it">Italian layout.  URL `http://en.wikipedia.org/wiki/Keyboard_layout'.(it)</option>
+<option value="neo">Neo Layout(neo)</option>
+<option value="no">Norwegian layout.(no)</option>
+<option value="programmer-dv">US Programmer Dvorak layout.(programmer-dv)</option>
+<option value="pt-nativo">PT Nativo layout URL `http://xahlee.info/kbd/pt-nativo_keyboard_layout.html'.(pt-nativo)</option>
+<option value="sw">Swedish layout.(sw)</option>
+<option value="us" selected>US English QWERTY layout.(us)</option>
+<option value="workman">US Workman layout.  URL `http://www.workmanlayout.com/blog/'.(workman)</option>
+</select><br/><strong>Theme:</strong><select onchange="change_layout()" id="select_theme"><option value="kbd-layouts">Keyboard Layout</option><option value="ergo-layouts" selected>Standard</option><option value="5.3.7">5.3.7 - Old Ergoemacs layout.  Uses M-; and M-: for isearch.  Uses M-n for cancel.</option>
+<option value="5.7.5">5.7.5 - Old ergoemacs layout.  Uses M-0 for close pane. Does not have beginning/end of buffer.</option>
+<option value="cabbage">cabbage - Cabbage theme.</option>
+<option value="guru">guru - Unbind some commonly used keys such as &gt;left&lt; and &gt;right&lt; to get in the habit of using ergoemacs keybindings.</option>
+<option value="hardcore">hardcore - Hardcore ergoemacs-mode. Removes &gt;backspace&lt; as well as arrow keys.</option>
+<option value="lvl0">lvl0 - Level 0 Ergoemacs, Emacs keys only.</option>
+<option value="lvl1">lvl1 - Level 1 Ergoemacs, just arrow keys.</option>
+<option value="lvl2">lvl2 - Level 2 Ergoemacs, Arrow keys, word movement, and deletion.</option>
+<option value="lvl3">lvl3 - Level 3 Ergoemacs -- ALL key except &gt;apps&lt; keys.</option>
+<option value="prog">prog - David Capellos ergoprog theme</option>
+<option value="reduction">reduction - Chord-Reduction</option></select></form><br /><image id="ergo_image" src="ergoemacs-extras/ergo-layouts/ergoemacs-layout-us.png" /><br /><iframe id="ergo_kbd" src="ergoemacs-extras/ergo-layouts/ergoemacs-layout-us.html"
+  width="100%" height="400"></iframe>
 </div>
 </div>
 
