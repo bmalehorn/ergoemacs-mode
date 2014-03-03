@@ -114,7 +114,34 @@
 
 <article>
   <div class="article-content">
-    <p>
+    <div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><kbd class="dark">W</kbd>hats the difference between ergoemacs and ergoemacs-mode?</h3>
+<div class="outline-text-3" id="text-1">
+
+<p><a href="http://ergoemacs.org/">Ergoemacs</a> is a set of customizations that make emacs easier to use.
+It also includes <a href="index.html">ergoemacs-mode</a>.  The minor mode, <a href="index.html">ergoemacs-mode</a>,
+implements the keybindings (and some other features) via a minor-mode
+that can be toggled to get back to standard emacs.
+</p></div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><kbd class="dark">H</kbd>ow do you select text when using ergoemacs-mode and ergoemacs-arrow keys</h3>
+<div class="outline-text-3" id="text-2">
+
+<p>You can hold the left <kbd class="dark">Alt</kbd>,
+then right hand press space to mark, then right hand using any of
+QWERTY 
+<kbd class="dark">i</kbd> 
+<kbd class="dark">j</kbd> 
+<kbd class="dark">k</kbd> 
+<kbd class="dark">l</kbd> to move by char, line, or 
+<kbd class="dark">u</kbd> 
+<kbd class="dark">o</kbd>  to move
+by word. ⇧ <Kbd Class="Dark">⇧ Shift</kbd>+<KBD CLASS="DARK">U</KBD> and ⇧ <Kbd Class="Dark">⇧ Shift</kbd>+<KBD CLASS="DARK">O</KBD> to move by paragraph/block.
+</p>
+<p>
 Of course, you can also use the <a href="standard-shortcuts.html">standard shortcuts</a>.  For example, 
 to select all, you can press <kbd class="dark">Ctrl</kbd>+<kbd class="dark">a</kbd>.  To move up, you can press ⇧
 <kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">↓</kbd> to select text downward.
@@ -123,10 +150,13 @@ to select all, you can press <kbd class="dark">Ctrl</kbd>+<kbd class="dark">a</k
 Another option is to use the ergoemacs reduction key theme.  Then the
 shift-movement keys work. 
 </p>
+</div>
 
-<div id="outline-container-1" class="outline-3">
-<h3 id="sec-1"><kbd class="dark">S</kbd>ome of my backspace keys have been muted by ergoemacs-mode</h3>
-<div class="outline-text-3" id="text-1">
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><kbd class="dark">S</kbd>ome of my backspace keys have been muted by ergoemacs-mode</h3>
+<div class="outline-text-3" id="text-3">
 
 <p>Ergoemacs-mode allows key sequences to be changed with a backspace
 key.  This masks some of the delete key sequences like C-x Backspace which
@@ -159,9 +189,9 @@ backspace, so <kbd class="dark">Ctl</kbd>+<kbd class="dark">x</kbd> backspace ca
 
 </div>
 
-<div id="outline-container-2" class="outline-3">
-<h3 id="sec-2"><kbd class="dark">H</kbd>ow do you get a 【▤ Menu】 key in Mac OS X</h3>
-<div class="outline-text-3" id="text-2">
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4"><kbd class="dark">H</kbd>ow do you get a 【▤ Menu】 key in Mac OS X</h3>
+<div class="outline-text-3" id="text-4">
 
 <p>Some of ergoemacs keys make use of the 【▤ Menu】 key.
 One way to set this up in a mac is to replace the Caps Lock key with
@@ -192,9 +222,9 @@ is done by:
 
 </div>
 
-<div id="outline-container-3" class="outline-3">
-<h3 id="sec-3"><kbd class="dark">W</kbd>hy don't you use the standard emacs key notation?</h3>
-<div class="outline-text-3" id="text-3">
+<div id="outline-container-5" class="outline-3">
+<h3 id="sec-5"><kbd class="dark">W</kbd>hy don't you use the standard emacs key notation?</h3>
+<div class="outline-text-3" id="text-5">
 
 <p>The <a href="http://www.emacswiki.org/emacs/EmacsKeyNotation">emacs key notation</a> is common across emacs, but not common for new
 users.  One of the goals of ergoemacs-mode is to allow new emacs users
@@ -206,9 +236,9 @@ notation.
 
 </div>
 
-<div id="outline-container-4" class="outline-3">
-<h3 id="sec-4"><kbd class="dark">I</kbd> was expecting C-j to be mapped to copy but instead it's C-c on my dvorak</h3>
-<div class="outline-text-3" id="text-4">
+<div id="outline-container-6" class="outline-3">
+<h3 id="sec-6"><kbd class="dark">I</kbd> was expecting C-j to be mapped to copy but instead it's C-c on my dvorak</h3>
+<div class="outline-text-3" id="text-6">
 
 <p>You have some options to get to copy and paste:
 </p><ul>
@@ -243,6 +273,24 @@ notation.
 (ergoemacs-mode 1)
 </pre>
 
+
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-3">
+<h3 id="sec-7"><kbd class="dark">I</kbd> want to modify my modifiers to work differently on a mac</h3>
+<div class="outline-text-3" id="text-7">
+
+<p>Ergoemacs-mode uses the option as an alt key because you can press it
+with a thumb.  If you want a different option, set:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-use-mac-command-as-meta nil)
+</pre>
 
 </div>
 </div>
