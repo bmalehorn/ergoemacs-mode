@@ -193,7 +193,8 @@ to adopt.
 </p>
 
 
-<pre class="src src-emacs-lisp">(setq ergoemacs-theme <span style="font-style: italic;">"lvl3"</span>)
+<pre class="src src-emacs-lisp">(setq ergoemacs-theme nil)
+(ergoemacs-theme-option-off '(apps apps-apps apps-punctuation apps-swap))
 (ergoemacs-mode 1)
 </pre>
 
@@ -232,7 +233,8 @@ to adopt.
 
 
 
-<pre class="src src-emacs-lisp">(setq ergoemacs-theme <span style="font-style: italic;">"guru"</span>)
+<pre class="src src-emacs-lisp">(setq ergoemacs-theme nil)
+(ergoemacs-theme-option-on '(guru))
 (ergoemacs-mode 1)
 </pre>
 
@@ -250,7 +252,8 @@ and page up/down keys.
 
 
 
-<pre class="src src-emacs-lisp">(setq ergoemacs-theme <span style="font-style: italic;">"hardcore"</span>)
+<pre class="src src-emacs-lisp">(setq ergoemacs-theme nil)
+(ergoemacs-theme-option-on '(guru no-backspace))
 (ergoemacs-mode 1)
 </pre>
 
